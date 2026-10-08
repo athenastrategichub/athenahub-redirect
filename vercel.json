@@ -1,9 +1,1 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://pwzhz3.csb.app/$1",
-      "permanent": false
-    }
-  ]
-}
+{}
