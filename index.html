@@ -1,321 +1,224 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="description" content="Athena Strategic Hub — Think. Train. Endure. Building a culture of strategic thinking, continuous learning, and professional excellence." />
-  <title>Athena Strategic Hub | Think. Train. Endure.</title>
-  
-  <style>
-    /* Design System - Minimalist Athena Hub */
-    :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --dark: #0f172a;
-      --muted: #64748b;
-      --light-bg: #f8fafc;
-      --border: #e2e8f0;
-      --max-width: 960px;
-    }
+import React from "react";
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background-color: #ffffff;
-      color: var(--dark);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      width: 100%;
-      max-width: var(--max-width);
-      margin-inline: auto;
-      padding-inline: 24px;
-    }
-
-    /* 1. HEADER */
-    .site-header {
-      padding-block: 24px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo-style {
-      font-size: 17px;
-      font-weight: 800;
-      color: var(--dark);
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-mark {
-      background: var(--primary);
-      color: #ffffff;
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      display: grid;
-      place-items: center;
-      font-size: 14px;
-      font-weight: 900;
-    }
-
-    .text-link {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-
-    .text-link:hover {
-      color: var(--primary);
-    }
-
-    /* 2. HERO SECTION */
-    .hero-section {
-      padding-block: 80px 56px;
-      text-align: center;
-    }
-
-    .badge-style {
-      display: inline-block;
-      background-color: #eff6ff;
-      color: var(--primary);
-      border: 1px solid #dbeafe;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      margin-bottom: 24px;
-    }
-
-    .hero-title {
-      font-size: clamp(38px, 6vw, 56px);
-      font-weight: 850;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      color: var(--dark);
-      margin-bottom: 20px;
-    }
-
-    .hero-description {
-      max-width: 620px;
-      margin-inline: auto;
-      font-size: 18px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    /* 3. OUR PLATFORMS */
-    .platforms-section {
-      padding-block: 40px 80px;
-      flex: 1;
-    }
-
-    .section-title {
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .platform-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      justify-content: center;
-      max-width: 540px;
-      margin-inline: auto;
-    }
-
-    .platform-card {
-      background: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 36px 32px;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      position: relative;
-    }
-
-    .platform-card:hover {
-      border-color: #bfdbfe;
-      box-shadow: 0 12px 30px -10px rgba(37, 99, 235, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .card-title {
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--dark);
-      letter-spacing: -0.02em;
-      margin-bottom: 8px;
-    }
-
-    .card-desc {
-      font-size: 15px;
-      color: var(--muted);
-      margin-bottom: 28px;
-      line-height: 1.5;
-    }
-
-    .btn-primary {
-      background-color: var(--primary);
-      color: #ffffff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: background-color 0.2s ease;
-      margin-top: auto;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--primary-hover);
-    }
-
-    /* 4. FOOTER */
-    .site-footer {
-      border-top: 1px solid var(--border);
-      padding-block: 28px;
-      background-color: #ffffff;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--dark);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .footer-copy {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 640px) {
-      .hero-section {
-        padding-block: 48px 36px;
-      }
-      .platforms-section {
-        padding-block: 24px 56px;
-      }
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-      .platform-card {
-        padding: 28px 24px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- 1. HEADER -->
-  <header class="site-header">
-    <div class="container nav-wrapper">
-      <a href="#" class="logo-style" aria-label="Athena Strategic Hub">
-        <span class="logo-mark">A</span>
-        <span>Athena Strategic Hub</span>
-      </a>
-      <a href="https://aps.athenahub.id/" class="text-link">
-        Buka APS ↗
-      </a>
-    </div>
-  </header>
-
-  <!-- 2. HERO -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="badge-style">WELCOME TO ATHENA</div>
-      <h1 class="hero-title">Think. Train. Endure.</h1>
-      <p class="hero-description">
-        Building a culture of strategic thinking, continuous learning, and professional excellence.
-      </p>
-    </div>
-  </section>
-
-  <!-- 3. OUR PLATFORMS -->
-  <main class="platforms-section">
-    <div class="container">
-      <h2 class="section-title">OUR PLATFORMS</h2>
-      <div class="platform-grid">
-        <div class="platform-card">
-          <h3 class="card-title">Athena Practice System</h3>
-          <p class="card-desc">
-            Professional learning & exam preparation.
-          </p>
-          <a href="https://aps.athenahub.id/" class="btn-primary">
-            Explore APS ↗
-          </a>
+export default function AthenaHub() {
+  return (
+    <div style={pageContainer}>
+      {/* 1. HEADER / NAV */}
+      <header style={headerStyle}>
+        <div style={navWrapper}>
+          <div style={logoStyle}>Athena Hub</div>
+          <nav style={navLinks}>
+            <a
+              href="https://aps.athenahub.id/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={textLink}
+            >
+              Buka APS ↗
+            </a>
+          </nav>
         </div>
-      </div>
-    </div>
-  </main>
+      </header>
 
-  <!-- 4. FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="logo-mark" style="width: 22px; height: 22px; font-size: 11px;">A</span>
-        <span>Athena Strategic Hub</span>
-      </div>
-      <p class="footer-copy">
-        © <span id="year">2026</span> Athena Strategic Hub. All rights reserved.
-      </p>
-    </div>
-  </footer>
+      <main>
+        {/* 2. HERO SECTION */}
+        <section style={heroSection}>
+          <div style={contentWrapper}>
+            <div style={badgeStyle}>WELCOME TO ATHENA</div>
+            <h1 style={heroTitle}>Think. Train. Endure.</h1>
+            <p style={heroDescription}>
+              Building a culture of strategic thinking, continuous learning, and
+              professional excellence.
+            </p>
+          </div>
+        </section>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+        {/* 3. OUR PLATFORMS */}
+        <section style={platformsSection}>
+          <div style={contentWrapper}>
+            <h2 style={sectionTitle}>OUR PLATFORMS</h2>
+            <div style={platformGrid}>
+              <div style={platformCard}>
+                <h3 style={cardTitle}>Athena Practice System</h3>
+                <p style={cardDesc}>
+                  Professional learning &amp; exam preparation.
+                </p>
+                <a
+                  href="https://aps.athenahub.id/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={mainCTA}
+                >
+                  Explore APS ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* 4. FOOTER */}
+      <footer style={footerStyle}>
+        <div style={contentWrapper}>
+          <p>© 2026 Athena Hub. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+/* ================= COMPACT THEME & STYLES (APS MATCHED) ================= */
+
+const pageContainer: React.CSSProperties = {
+  fontFamily: "'Inter', sans-serif",
+  color: "#0f172a",
+  lineHeight: "1.5",
+  backgroundColor: "#fff",
+  minHeight: "100vh",
+  display: "flex",
+  flexDirection: "column",
+};
+
+const contentWrapper: React.CSSProperties = {
+  maxWidth: "1100px",
+  margin: "0 auto",
+  width: "90%",
+};
+
+const headerStyle: React.CSSProperties = {
+  padding: "16px 0",
+  borderBottom: "1px solid #f1f5f9",
+  backgroundColor: "rgba(255,255,255,0.8)",
+  backdropFilter: "blur(10px)",
+  position: "sticky",
+  top: 0,
+  zIndex: 100,
+};
+
+const navWrapper: React.CSSProperties = {
+  ...contentWrapper,
+  display: "flex",
+  justify-content: "space-between",
+  alignItems: "center",
+};
+
+const logoStyle: React.CSSProperties = {
+  fontSize: "18px",
+  fontWeight: 800,
+  color: "#2563eb",
+  letterSpacing: "-0.5px",
+};
+
+const navLinks: React.CSSProperties = {
+  display: "flex",
+  alignItems: "center",
+  gap: "20px",
+};
+
+const textLink: React.CSSProperties = {
+  textDecoration: "none",
+  color: "#64748b",
+  fontWeight: 600,
+  fontSize: "13px",
+};
+
+const heroSection: React.CSSProperties = {
+  padding: "80px 0 50px 0",
+  textAlign: "center",
+};
+
+const badgeStyle: React.CSSProperties = {
+  display: "inline-block",
+  padding: "4px 10px",
+  background: "#eff6ff",
+  color: "#2563eb",
+  borderRadius: "4px",
+  fontSize: "11px",
+  fontWeight: 700,
+  textTransform: "uppercase",
+  marginBottom: "16px",
+};
+
+const heroTitle: React.CSSProperties = {
+  fontSize: "clamp(32px, 5vw, 56px)",
+  fontWeight: 850,
+  lineHeight: "1.1",
+  letterSpacing: "-0.03em",
+  margin: 0,
+  color: "#0f172a",
+};
+
+const heroDescription: React.CSSProperties = {
+  fontSize: "17px",
+  color: "#475569",
+  maxWidth: "620px",
+  margin: "20px auto 0",
+};
+
+const platformsSection: React.CSSProperties = {
+  padding: "40px 0 80px 0",
+  textAlign: "center",
+  flex: 1,
+};
+
+const sectionTitle: React.CSSProperties = {
+  fontSize: "12px",
+  fontWeight: 800,
+  letterSpacing: "0.1em",
+  textTransform: "uppercase",
+  color: "#94a3b8",
+  marginBottom: "28px",
+};
+
+const platformGrid: React.CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+};
+
+const platformCard: React.CSSProperties = {
+  padding: "32px 28px",
+  backgroundColor: "#f8fafc",
+  borderRadius: "16px",
+  textAlign: "left",
+  border: "1px solid #e2e8f0",
+  width: "100%",
+  maxWidth: "480px",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
+};
+
+const cardTitle: React.CSSProperties = {
+  fontSize: "20px",
+  fontWeight: 800,
+  color: "#0f172a",
+  margin: "0 0 8px 0",
+  letterSpacing: "-0.01em",
+};
+
+const cardDesc: React.CSSProperties = {
+  fontSize: "14px",
+  color: "#64748b",
+  margin: "0 0 24px 0",
+};
+
+const mainCTA: React.CSSProperties = {
+  display: "inline-block",
+  padding: "12px 24px",
+  backgroundColor: "#2563eb",
+  color: "#fff",
+  borderRadius: "8px",
+  fontSize: "14px",
+  fontWeight: 700,
+  textDecoration: "none",
+  boxShadow: "0 10px 15px -3px rgba(37, 99, 235, 0.2)",
+};
+
+const footerStyle: React.CSSProperties = {
+  padding: "32px 0",
+  borderTop: "1px solid #f1f5f9",
+  textAlign: "center",
+  color: "#94a3b8",
+  fontSize: "13px",
+  marginTop: "auto",
+};
