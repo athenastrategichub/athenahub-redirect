@@ -2,435 +2,775 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#ffffff" />
   <meta name="description" content="Athena Strategic Hub — ruang bagi profesional untuk mengembangkan cara berpikir, memperkuat kompetensi, dan terus bertumbuh. Jelajahi Athena Practice System." />
   <title>Athena Strategic Hub | Think. Train. Endure.</title>
+  
   <style>
+    /* Global Design System - Matching aps.athenahub.id */
     :root {
-      --blue: #2563eb;
-      --blue-dark: #1d4ed8;
-      --navy: #0f172a;
-      --slate: #475569;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --dark: #0f172a;
+      --dark-card: #1e293b;
+      --slate: #334155;
       --muted: #64748b;
-      --line: #e2e8f0;
-      --soft: #f8fafc;
-      --max: 1120px;
+      --light-bg: #f8fafc;
+      --border: #e2e8f0;
+      --border-dark: #334155;
+      --green: #4ade80;
+      --red: #f87171;
+      --max-width: 1120px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
+    *, *::before, *::after {
+      box-sizing: border-box;
       margin: 0;
-      background: #fff;
-      color: var(--navy);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: var(--dark);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-    a { color: inherit; text-decoration: none; }
-    button, a { -webkit-tap-highlight-color: transparent; }
-    a:focus-visible, summary:focus-visible {
-      outline: 3px solid #93c5fd;
-      outline-offset: 4px;
-      border-radius: 6px;
-    }
-    .container { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--blue);
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-    }
-    .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
-    .section-title {
-      margin: 14px 0 15px;
-      font-size: clamp(29px, 4vw, 43px);
-      line-height: 1.16;
-      letter-spacing: -.045em;
-      font-weight: 850;
-    }
-    .section-lead { margin: 0; color: var(--slate); font-size: 16px; max-width: 620px; }
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 23px;
-      min-height: 49px;
-      border-radius: 11px;
-      font-size: 14px;
-      line-height: 1.3;
-      font-weight: 750;
-      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary { color: #fff; background: var(--blue); box-shadow: 0 11px 24px rgba(37,99,235,.19); }
-    .btn-primary:hover { background: var(--blue-dark); box-shadow: 0 13px 28px rgba(37,99,235,.25); }
-    .btn-outline { border: 1px solid #dbe4f1; color: #334155; background: #fff; }
-    .btn-outline:hover { background: var(--soft); }
-    .arrow { font-size: 19px; line-height: 1; }
 
-    /* Header */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Layout Components */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+
+    /* Header & Navigation */
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 30;
-      background: rgba(255,255,255,.92);
-      border-bottom: 1px solid #eef2f7;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-    }
-    .header-inner { min-height: 76px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-    .brand { display: inline-flex; align-items: center; gap: 11px; min-width: 0; }
-    .brand-mark {
-      display: grid; place-items: center;
-      width: 40px; height: 40px; flex: 0 0 40px;
-      color: #fff; font-size: 23px; font-weight: 900; letter-spacing: -.08em;
-      background: linear-gradient(145deg, #3b82f6, #1d4ed8);
-      border-radius: 11px; box-shadow: 0 5px 15px rgba(37,99,235,.18);
-    }
-    .brand-name { font-size: 14px; font-weight: 850; letter-spacing: -.025em; line-height: 1.25; }
-    .brand-name small { display: block; font-size: 10px; font-weight: 650; color: #94a3b8; letter-spacing: .11em; margin-top: 3px; }
-    .header-right { display: flex; align-items: center; gap: 30px; }
-    .nav-links { display: flex; align-items: center; gap: 26px; }
-    .nav-links a { color: #64748b; font-size: 13px; font-weight: 650; transition: color .2s; }
-    .nav-links a:hover { color: var(--blue); }
-    .header-right .btn { padding: 11px 17px; min-height: 41px; font-size: 12px; border-radius: 8px; }
-
-    /* Hero */
-    .hero { position: relative; overflow: hidden; background: linear-gradient(180deg, #fff 60%, #f7faff 100%); }
-    .hero::before {
-      content: ""; position: absolute; right: -160px; top: -160px;
-      width: 470px; height: 470px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(191,219,254,.32), transparent 67%);
-      pointer-events: none;
-    }
-    .hero-inner { display: grid; grid-template-columns: 1.08fr .92fr; gap: 45px; align-items: center; min-height: 590px; padding-block: 78px 92px; }
-    .hero-pill {
-      display: inline-flex; gap: 9px; align-items: center;
-      background: #eff6ff; border: 1px solid #dbeafe; color: #1d4ed8;
-      border-radius: 999px; font-size: 11px; font-weight: 750; padding: 7px 12px;
-    }
-    .hero-pill span { width: 6px; height: 6px; background: #2563eb; border-radius: 50%; }
-    .hero h1 {
-      margin: 23px 0 22px;
-      font-size: clamp(43px, 5.1vw, 67px);
-      letter-spacing: -.065em; line-height: 1.105; font-weight: 900;
-    }
-    .hero h1 em { font-style: normal; color: var(--blue); }
-    .hero-copy > p { max-width: 550px; color: var(--slate); font-size: 17px; margin: 0; line-height: 1.85; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 31px; }
-    .hero-note { font-size: 12px; color: #94a3b8; margin-top: 19px; }
-    .hero-art { position: relative; height: 400px; display: grid; place-items: center; }
-    .art-orbit {
-      position: absolute; width: 335px; height: 335px; border: 1px solid #dbeafe;
-      border-radius: 50%; transform: rotate(-17deg);
-    }
-    .art-orbit::before, .art-orbit::after { content: ""; position: absolute; border: 1px solid #dbeafe; border-radius: 50%; inset: 30px; }
-    .art-orbit::after { inset: 67px; border-style: dashed; }
-    .art-card {
-      position: relative; width: min(100%, 390px); padding: 30px;
-      background: rgba(255,255,255,.94); border: 1px solid #e2e8f0;
-      border-radius: 22px; box-shadow: 0 28px 65px rgba(37,65,112,.12);
-      transform: rotate(-2deg);
-    }
-    .art-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 29px; }
-    .art-caption { color: #94a3b8; font-size: 10px; font-weight: 800; letter-spacing: .13em; }
-    .art-dots { display: flex; gap: 5px; }
-    .art-dots i { width: 7px; height: 7px; border-radius: 50%; background: #bfdbfe; }
-    .art-dots i:first-child { background: #2563eb; }
-    .art-big { font-size: 56px; line-height: 1; font-weight: 950; letter-spacing: -.09em; color: #1e40af; }
-    .art-line { height: 1px; background: #e2e8f0; margin: 22px 0; }
-    .art-words { display: grid; gap: 11px; }
-    .art-word { display: flex; align-items: center; gap: 12px; color: #334155; font-size: 14px; font-weight: 750; }
-    .art-word span { width: 25px; height: 25px; display: grid; place-items: center; background: #eff6ff; color: var(--blue); border-radius: 7px; font-size: 11px; }
-    .float-tag {
-      position: absolute; right: -12px; bottom: 20px;
-      background: #1e293b; color: #fff; padding: 13px 18px; border-radius: 12px;
-      font-size: 12px; font-weight: 750; box-shadow: 0 12px 32px rgba(15,23,42,.22);
-      transform: rotate(5deg);
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(8px);
     }
 
-    /* Manifesto strip */
-    .values-strip { background: #f8fafc; border-block: 1px solid #eef2f7; }
-    .values-inner { display: flex; justify-content: center; align-items: center; gap: 27px; flex-wrap: wrap; min-height: 95px; padding-block: 20px; }
-    .values-inner .label { color: #94a3b8; font-size: 10px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
-    .values-inner strong { font-size: 14px; color: #475569; font-weight: 750; }
-    .values-inner .sep { color: #cbd5e1; }
-
-    /* Philosophy */
-    .section { padding: 96px 0; scroll-margin-top: 86px; }
-    .center-head { text-align: center; max-width: 730px; margin: 0 auto 43px; }
-    .center-head .section-lead { margin-inline: auto; }
-    .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .principle {
-      padding: 30px 28px; border: 1px solid #e9eef5; border-radius: 17px;
-      background: #fff; box-shadow: 0 5px 24px rgba(15,23,42,.025);
-      transition: transform .2s, box-shadow .2s, border-color .2s;
+    .nav-wrapper {
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .principle:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(15,23,42,.06); border-color: #bfdbfe; }
-    .principle .num { font-size: 12px; color: #93c5fd; font-weight: 850; letter-spacing: .05em; }
-    .principle h3 { margin: 24px 0 9px; font-size: 22px; letter-spacing: -.04em; }
-    .principle p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
 
-    /* APS */
-    .platform-section { background: #f8fafc; border-block: 1px solid #f1f5f9; }
-    .platform-layout { display: grid; grid-template-columns: .92fr 1.08fr; gap: 56px; align-items: center; }
-    .platform-copy h2 { max-width: 470px; }
-    .feature-list { display: grid; gap: 17px; margin: 26px 0 32px; }
-    .feature-list div { display: flex; align-items: flex-start; gap: 12px; color: #475569; font-size: 14px; }
-    .tick { flex: 0 0 22px; display: grid; place-items: center; width: 22px; height: 22px; background: #dbeafe; color: #1d4ed8; border-radius: 50%; font-size: 13px; font-weight: 850; }
-    .platform-preview {
-      padding: 18px; border: 1px solid #e2e8f0; background: #fff;
-      border-radius: 21px; box-shadow: 0 24px 50px rgba(15,23,42,.065);
+    .logo-style {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--dark);
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .preview-top { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f1f5f9; padding: 2px 5px 16px; }
-    .preview-top small { font-size: 11px; color: #64748b; font-weight: 800; }
-    .preview-body { padding: 25px 18px 16px; }
-    .preview-kicker { color: #2563eb; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
-    .preview-body h3 { margin: 8px 0 21px; font-size: 24px; letter-spacing: -.045em; }
-    .preview-tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 11px; }
-    .preview-tile { min-height: 104px; border-radius: 12px; background: #f8fafc; border: 1px solid #edf2f7; padding: 16px; }
-    .preview-tile .tile-number { display: block; font-size: 11px; color: #3b82f6; font-weight: 850; margin-bottom: 13px; }
-    .preview-tile strong { font-size: 13px; line-height: 1.4; display: block; }
-    .preview-tile.selected { background: #eff6ff; border-color: #bfdbfe; }
-    .preview-bottom { margin-top: 13px; border-radius: 10px; background: #1e293b; color: #e2e8f0; font-size: 11px; font-weight: 700; padding: 12px 16px; text-align: center; }
 
-    /* Vision */
-    .vision-section { background: #fff; }
-    .vision-panel {
-      position: relative; overflow: hidden; border-radius: 23px;
-      background: #0f172a; color: #fff; padding: 55px 62px;
-      display: flex; align-items: center; justify-content: space-between; gap: 35px;
+    .logo-mark {
+      background: var(--primary);
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      font-size: 14px;
+      font-weight: 900;
     }
-    .vision-panel::after {
-      content: "A"; position: absolute; top: -125px; right: 28px;
-      color: rgba(255,255,255,.035); font-size: 460px; font-weight: 950;
-      line-height: 1; pointer-events: none;
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
     }
-    .vision-text { position: relative; z-index: 1; max-width: 610px; }
-    .vision-text .eyebrow { color: #93c5fd; }
-    .vision-text .eyebrow::before { background: #93c5fd; }
-    .vision-text h2 { font-size: clamp(28px, 3.5vw, 42px); line-height: 1.17; letter-spacing: -.04em; margin: 15px 0; }
-    .vision-text p { color: #94a3b8; margin: 0; max-width: 530px; font-size: 15px; }
-    .vision-symbol { position: relative; z-index: 1; border: 1px solid #334155; border-radius: 50%; height: 135px; width: 135px; flex: 0 0 135px; display: grid; place-items: center; font-size: 66px; color: #60a5fa; }
 
-    /* FAQ & footer */
-    .faq-section { padding-top: 0; }
-    .faq-wrap { max-width: 780px; margin-inline: auto; }
-    .faq-wrap h2 { text-align: center; margin-bottom: 30px; }
-    details { border-bottom: 1px solid var(--line); padding: 19px 0; }
-    details:first-of-type { border-top: 1px solid var(--line); }
-    summary { cursor: pointer; font-size: 15px; font-weight: 750; list-style: none; display: flex; justify-content: space-between; gap: 20px; }
-    summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; color: #2563eb; font-size: 21px; line-height: 1; }
-    details[open] summary::after { content: "−"; }
-    details p { color: #64748b; font-size: 14px; max-width: 680px; margin: 12px 0 0; }
-    .footer-cta { padding: 74px 0; text-align: center; background: #eff6ff; }
-    .footer-cta h2 { margin: 10px auto 15px; max-width: 700px; font-size: clamp(28px, 4vw, 40px); line-height: 1.2; letter-spacing: -.04em; }
-    .footer-cta p { margin: 0 auto 24px; color: #64748b; font-size: 15px; }
-    .site-footer { background: #fff; border-top: 1px solid #f1f5f9; }
-    .footer-inner { min-height: 100px; padding-block: 25px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
-    .footer-copy { color: #94a3b8; font-size: 12px; }
-    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-    .footer-links a { color: #64748b; font-size: 12px; font-weight: 650; }
-    .footer-links a:hover { color: var(--blue); }
+    .text-link {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
 
+    .text-link:hover {
+      color: var(--primary);
+    }
+
+    /* Buttons matching APS */
+    .nav-btn, .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .nav-btn:hover, .btn-primary:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--dark);
+      border: 1px solid var(--border);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--light-bg);
+      border-color: #cbd5e1;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding-block: 80px 64px;
+      text-align: center;
+    }
+
+    .badge-style {
+      display: inline-block;
+      background-color: #eff6ff;
+      color: var(--primary);
+      border: 1px solid #dbeafe;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: clamp(36px, 5vw, 54px);
+      font-weight: 850;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-description {
+      max-width: 680px;
+      margin-inline: auto;
+      font-size: 18px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    .hero-button-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-actions-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .micro-copy {
+      font-size: 13px;
+      color: #94a3b8;
+      margin-top: 4px;
+    }
+
+    /* Trust Bar */
+    .trust-bar {
+      border-block: 1px solid var(--border);
+      background-color: var(--light-bg);
+      padding-block: 20px;
+      text-align: center;
+    }
+
+    .trust-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94a3b8;
+      margin-bottom: 8px;
+    }
+
+    .trust-logo-row {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--slate);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .trust-logo-row span.dot {
+      color: #cbd5e1;
+    }
+
+    /* Section Global Styles */
+    .section-padding {
+      padding-block: 80px;
+    }
+
+    .section-title {
+      font-size: clamp(26px, 3.5vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--dark);
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .narrative-box {
+      max-width: 720px;
+      margin: 0 auto 48px;
+      text-align: center;
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .narrative-box strong {
+      color: var(--dark);
+      display: block;
+      margin-top: 8px;
+    }
+
+    /* Pain Grid / Principles (Filosofi) */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .pain-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 24px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .pain-card:hover {
+      border-color: #bfdbfe;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-num {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .card-head {
+      font-size: 20px;
+      font-weight: 750;
+      color: var(--dark);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Feature Section (Metode Athena & APS) */
+    .feature-section {
+      background-color: var(--light-bg);
+      border-block: 1px solid var(--border);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .feature-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      background: #eff6ff;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 800;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+    }
+
+    .feature-head {
+      font-size: 18px;
+      font-weight: 750;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .feature-text {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Dark Qualify Section (Aps-style Dark Card) */
+    .qualify-card {
+      background-color: var(--dark);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 56px 48px;
+      box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.3);
+    }
+
+    .qualify-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .qualify-box {
+      background: var(--dark-card);
+      border: 1px solid var(--border-dark);
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .list-style {
+      list-style: none;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .list-style li {
+      font-size: 14px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    /* FAQ Section */
+    .faq-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    details {
+      border-bottom: 1px solid var(--border);
+      padding-block: 20px;
+    }
+
+    details:first-of-type {
+      border-top: 1px solid var(--border);
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--dark);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      margin-top: 12px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* Footer & Bottom CTA */
+    .footer-cta {
+      background-color: var(--light-bg);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding-block: 72px;
+    }
+
+    .site-footer {
+      background-color: #ffffff;
+      border-top: 1px solid var(--border);
+      padding-block: 28px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: #94a3b8;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* Responsive Breakdown */
     @media (max-width: 900px) {
-      .nav-links { gap: 16px; }
-      .hero-inner { gap: 24px; }
-      .hero-art { height: 360px; }
-      .art-card { padding: 24px; }
-      .platform-layout { gap: 28px; }
-      .vision-panel { padding: 43px; }
+      .pain-grid, .feature-grid, .qualify-grid {
+        grid-template-columns: 1fr;
+      }
+      .qualify-card {
+        padding: 36px 24px;
+      }
     }
-    @media (max-width: 720px) {
-      .container { width: min(var(--max), calc(100% - 36px)); }
-      .header-inner { min-height: 66px; }
-      .brand-name { font-size: 12px; }
-      .brand-mark { height: 36px; width: 36px; flex-basis: 36px; }
-      .nav-links { display: none; }
-      .header-right .btn { font-size: 11px; padding: 10px 12px; }
-      .hero-inner { display: block; padding-block: 65px 70px; }
-      .hero h1 { font-size: clamp(42px, 10vw, 62px); }
-      .hero-copy > p { font-size: 15px; }
-      .hero-art { margin-top: 38px; height: 335px; }
-      .art-card { width: min(90%, 385px); }
-      .float-tag { right: 0; bottom: 6px; }
-      .values-inner { gap: 14px; }
-      .values-inner .label { width: 100%; text-align: center; }
-      .section { padding: 71px 0; }
-      .principles { grid-template-columns: 1fr; gap: 13px; }
-      .principle { padding: 23px; }
-      .principle h3 { margin-top: 13px; }
-      .platform-layout { grid-template-columns: 1fr; gap: 33px; }
-      .vision-panel { padding: 36px 27px; }
-      .vision-symbol { display: none; }
-      .footer-inner { flex-direction: column; text-align: center; gap: 14px; }
-    }
-    @media (max-width: 420px) {
-      .brand-name { max-width: 135px; }
-      .hero-actions { flex-direction: column; align-items: stretch; }
-      .btn { width: 100%; }
-      .art-orbit { width: 275px; height: 275px; }
-      .art-big { font-size: 48px; }
-      .preview-body { padding-inline: 5px; }
-      .preview-tile { padding: 12px; }
-      .footer-links { justify-content: center; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+      .hero-section {
+        padding-block: 56px 40px;
+      }
+      .hero-actions-row {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- 1. HEADER / NAV -->
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#beranda" aria-label="Athena Strategic Hub, kembali ke atas">
-        <span class="brand-mark" aria-hidden="true">A</span>
-        <span class="brand-name">ATHENA STRATEGIC HUB<small>THINK · TRAIN · ENDURE</small></span>
+    <div class="container nav-wrapper">
+      <a href="#beranda" class="logo-style" aria-label="Athena Strategic Hub">
+        <span class="logo-mark">A</span>
+        <span>Athena Strategic Hub</span>
       </a>
-      <div class="header-right">
-        <nav class="nav-links" aria-label="Navigasi utama">
-          <a href="#tentang">Tentang</a>
-          <a href="#platform">Platform</a>
-          <a href="#visi">Visi Kami</a>
-        </nav>
-        <a class="btn btn-primary" href="https://aps.athenahub.id/">Buka APS <span class="arrow" aria-hidden="true">↗</span></a>
-      </div>
+      <nav class="nav-links" aria-label="Navigasi Utama">
+        <a href="#tentang" class="text-link">Tentang</a>
+        <a href="#platform" class="text-link">Platform</a>
+        <a href="#visi" class="text-link">Visi Kami</a>
+        <a href="https://aps.athenahub.id/" class="nav-btn">
+          Buka APS ↗
+        </a>
+      </nav>
     </div>
   </header>
 
   <main id="beranda">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <span class="hero-pill"><span aria-hidden="true"></span> Welcome to Athena Strategic Hub</span>
-          <h1 id="hero-title">Think deeper.<br /><em>Train smarter.</em><br />Endure further.</h1>
-          <p>Ruang bagi profesional yang ingin terus bertumbuh—mempertajam cara berpikir, membangun kompetensi, dan melangkah lebih jauh melalui pembelajaran yang bermakna.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://aps.athenahub.id/">Jelajahi Athena Practice System <span class="arrow" aria-hidden="true">↗</span></a>
-            <a class="btn btn-outline" href="#tentang">Kenali Athena Hub <span class="arrow" aria-hidden="true">↓</span></a>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="badge-style">Athena Strategic Hub</div>
+        <h1 class="hero-title">
+          Think Deeper. <br />
+          <span>Train Smarter.</span> <br />
+          Endure Further.
+        </h1>
+        <p class="hero-description">
+          Ruang bagi profesional untuk mengembangkan cara berpikir kritis, memperkuat kompetensi, dan melangkah lebih jauh melalui pembelajaran yang terstruktur dan bermakna.
+        </p>
+        <div class="hero-button-group">
+          <div class="hero-actions-row">
+            <a href="https://aps.athenahub.id/" class="btn-primary">
+              Jelajahi Athena Practice System ↗
+            </a>
+            <a href="#tentang" class="btn-secondary">
+              Kenali Athena Hub ↓
+            </a>
           </div>
-          <p class="hero-note">Satu hub untuk pembelajaran, latihan, dan pengembangan profesional.</p>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="art-orbit"></div>
-          <div class="art-card">
-            <div class="art-top"><span class="art-caption">THE ATHENA MINDSET</span><span class="art-dots"><i></i><i></i><i></i></span></div>
-            <div class="art-big">Always<br />evolving<span style="color:#60a5fa">.</span></div>
-            <div class="art-line"></div>
-            <div class="art-words">
-              <div class="art-word"><span>01</span> Think with clarity.</div>
-              <div class="art-word"><span>02</span> Train with purpose.</div>
-              <div class="art-word"><span>03</span> Endure with confidence.</div>
-            </div>
-          </div>
-          <div class="float-tag">Progress is a practice. ✦</div>
+          <p class="micro-copy">
+            Satu hub terpadu untuk pembelajaran, latihan, dan pengembangan profesional.
+          </p>
         </div>
       </div>
     </section>
 
-    <div class="values-strip" aria-label="Nilai utama Athena">
-      <div class="container values-inner">
-        <span class="label">Built around</span>
-        <strong>Critical Thinking</strong><span class="sep" aria-hidden="true">•</span>
-        <strong>Continuous Learning</strong><span class="sep" aria-hidden="true">•</span>
-        <strong>Professional Growth</strong>
+    <!-- 3. TRUST & VALUE BAR -->
+    <div class="trust-bar">
+      <div class="container">
+        <p class="trust-label">Standardisasi Pembelajaran Berbasis:</p>
+        <div class="trust-logo-row">
+          <span>Critical Thinking</span> <span class="dot">•</span>
+          <span>Continuous Learning</span> <span class="dot">•</span>
+          <span>Professional Growth</span>
+        </div>
       </div>
     </div>
 
-    <section class="section" id="tentang" aria-labelledby="about-title">
+    <!-- 4. FILOSOFI (PAIN / AGITATION LAYOUT STYLE) -->
+    <section class="section-padding" id="tentang">
       <div class="container">
-        <div class="center-head">
-          <span class="eyebrow">Filosofi Athena</span>
-          <h2 class="section-title" id="about-title">Lebih dari sekadar belajar.<br />Ini tentang cara kita bertumbuh.</h2>
-          <p class="section-lead">Athena Strategic Hub dibangun di atas tiga prinsip sederhana yang saling menguatkan.</p>
+        <h2 class="section-title">Lebih Dari Sekadar Belajar.</h2>
+        <div class="narrative-box">
+          <p>
+            Tantangan dunia profesional bukan kekurangan informasi, melainkan bagaimana menyaring, memahami konteks, dan mengambil keputusan yang tepat.
+            <strong>Athena Hub hadir untuk memperkuat landasan berpikir Anda.</strong>
+          </p>
         </div>
-        <div class="principles">
-          <article class="principle"><span class="num">01 / THINK</span><h3>Berpikir jernih.</h3><p>Memahami alasan di balik sebuah jawaban, melihat konteks, dan membangun penilaian profesional yang lebih tajam.</p></article>
-          <article class="principle"><span class="num">02 / TRAIN</span><h3>Berlatih terarah.</h3><p>Mengubah pemahaman menjadi keterampilan melalui latihan, evaluasi, dan perbaikan yang konsisten.</p></article>
-          <article class="principle"><span class="num">03 / ENDURE</span><h3>Bertumbuh konsisten.</h3><p>Memahami bahwa kemajuan bukan hasil satu langkah besar, melainkan proses yang dijalani dengan tekun.</p></article>
+        <div class="pain-grid">
+          <article class="pain-card">
+            <span class="card-num">01 / THINK</span>
+            <h3 class="card-head">Berpikir Jernih</h3>
+            <p class="card-text">
+              Memahami alasan di balik sebuah konsep, melihat konteks secara menyeluruh, dan membangun penilaian profesional yang lebih tajam.
+            </p>
+          </article>
+          <article class="pain-card">
+            <span class="card-num">02 / TRAIN</span>
+            <h3 class="card-head">Berlatih Terarah</h3>
+            <p class="card-text">
+              Mengubah pemahaman teoritis menjadi keterampilan praktis melalui simulasi, evaluasi, dan perbaikan yang konsisten.
+            </p>
+          </article>
+          <article class="pain-card">
+            <span class="card-num">03 / ENDURE</span>
+            <h3 class="card-head">Bertumbuh Konsisten</h3>
+            <p class="card-text">
+              Memahami bahwa kemajuan karir berkelanjutan adalah hasil dari pembiasaan disiplin dan ketahanan proses jangka panjang.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section platform-section" id="platform" aria-labelledby="platform-title">
-      <div class="container platform-layout">
-        <div class="platform-copy">
-          <span class="eyebrow">Featured Platform</span>
-          <h2 class="section-title" id="platform-title">Kenali <span style="color:#2563eb">Athena Practice System.</span></h2>
-          <p class="section-lead">Platform latihan dan simulasi ujian yang membantu profesional belajar lebih terstruktur, memahami pembahasan, dan memantau perkembangan.</p>
-          <div class="feature-list">
-            <div><span class="tick" aria-hidden="true">✓</span><span><strong>Guided Practice</strong> — latihan soal dengan pembahasan dan penalaran.</span></div>
-            <div><span class="tick" aria-hidden="true">✓</span><span><strong>Exam Simulation</strong> — membiasakan diri dengan suasana ujian.</span></div>
-            <div><span class="tick" aria-hidden="true">✓</span><span><strong>Learning Analytics</strong> — melihat progres dan area pengembangan.</span></div>
-          </div>
-          <a class="btn btn-primary" href="https://aps.athenahub.id/">Masuk ke Athena Practice System <span class="arrow" aria-hidden="true">↗</span></a>
+    <!-- 5. FEATURED PLATFORM (ATHENA PRACTICE SYSTEM) -->
+    <section class="section-padding feature-section" id="platform">
+      <div class="container">
+        <h2 class="section-title">Kenali Athena Practice System</h2>
+        <div class="narrative-box">
+          <p>
+            Platform latihan dan simulasi ujian yang dirancang khusus untuk membantu profesional belajar lebih efisien, terstruktur, dan berbasis data.
+          </p>
         </div>
-        <div class="platform-preview" aria-label="Ilustrasi konsep fitur Athena Practice System">
-          <div class="preview-top"><div class="art-dots" aria-hidden="true"><i></i><i></i><i></i></div><small>ATHENA / PRACTICE SYSTEM</small></div>
-          <div class="preview-body">
-            <span class="preview-kicker">Learn with intention</span>
-            <h3>Prepare with purpose.</h3>
-            <div class="preview-tiles">
-              <div class="preview-tile selected"><span class="tile-number">01</span><strong>Guided<br />Practice</strong></div>
-              <div class="preview-tile"><span class="tile-number">02</span><strong>Exam<br />Simulation</strong></div>
-              <div class="preview-tile"><span class="tile-number">03</span><strong>Review &amp;<br />Reasoning</strong></div>
-              <div class="preview-tile"><span class="tile-number">04</span><strong>Progress<br />Insights</strong></div>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <div class="feature-icon">01</div>
+            <div>
+              <h3 class="feature-head">Guided Practice</h3>
+              <p class="feature-text">
+                Latihan soal komprehensif lengkap dengan pembahasan penalaran logis untuk melatih insting dan pemahaman mendalam.
+              </p>
             </div>
-            <div class="preview-bottom">Think · Train · Endure</div>
           </div>
+          <div class="feature-item">
+            <div class="feature-icon">02</div>
+            <div>
+              <h3 class="feature-head">Exam Simulation</h3>
+              <p class="feature-text">
+                Simulasi dengan algoritma dan atmosfer yang disesuaikan persis dengan standar uji kompetensi profesional sebenarnya.
+              </p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">03</div>
+            <div>
+              <h3 class="feature-head">Learning Analytics</h3>
+              <p class="feature-text">
+                Dashboard analitis objektif yang memantau progres belajar dan mendeteksi blind spots sebelum menghadapi ujian resmi.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="https://aps.athenahub.id/" class="btn-primary">
+            Masuk ke Athena Practice System ↗
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section vision-section" id="visi" aria-labelledby="vision-title">
+    <!-- 6. QUALIFICATION & VISION (DARK CARD STYLE) -->
+    <section class="section-padding" id="visi">
       <div class="container">
-        <div class="vision-panel">
-          <div class="vision-text">
-            <span class="eyebrow">Our Direction</span>
-            <h2 id="vision-title">Satu identitas. Lebih banyak ruang untuk berkembang.</h2>
-            <p>Athena Strategic Hub menjadi rumah bagi inisiatif pembelajaran dan pengembangan profesional. Athena Practice System adalah platform yang dapat Anda jelajahi saat ini.</p>
+        <div class="qualify-card">
+          <h2 class="section-title" style="color: #ffffff; text-align: left; margin-bottom: 8px;">
+            Satu Identitas. Lebih Banyak Ruang Berkembang.
+          </h2>
+          <p style="color: #94a3b8; font-size: 15px;">
+            Athena Strategic Hub bertindak sebagai rumah utama bagi berbagai inisiatif pengembangan kompetensi dan platform profesional.
+          </p>
+
+          <div class="qualify-grid">
+            <div class="qualify-box">
+              <h3 style="color: var(--green); font-size: 14px; letter-spacing: 0.05em; font-weight: 800;">
+                ✓ FOKUS ATHENA STRATEGIC HUB
+              </h3>
+              <ul class="list-style">
+                <li><span>•</span> Menanamkan kerangka berpikir kritis dan adaptif bagi profesional.</li>
+                <li><span>•</span> Menyediakan ekosistem latihan yang siap diakses kapan saja.</li>
+                <li><span>•</span> Mendampingi kesiapan sertifikasi dan karir jangka panjang.</li>
+              </ul>
+            </div>
+            <div class="qualify-box">
+              <h3 style="color: #60a5fa; font-size: 14px; letter-spacing: 0.05em; font-weight: 800;">
+                ✦ LANDASAN PEMBELAJARAN
+              </h3>
+              <ul class="list-style">
+                <li><span>•</span> Fokus pada pemahaman mendasar, bukan sekadar hafalan.</li>
+                <li><span>•</span> Evaluasi terukur berbasis data performa objektif.</li>
+                <li><span>•</span> Pembelajaran yang relevan dengan kebutuhan industri.</li>
+              </ul>
+            </div>
           </div>
-          <div class="vision-symbol" aria-hidden="true">↗</div>
         </div>
       </div>
     </section>
 
-    <section class="section faq-section" aria-labelledby="faq-title">
+    <!-- 7. FAQ SECTION -->
+    <section class="section-padding" style="padding-top: 0;">
       <div class="container faq-wrap">
-        <span class="eyebrow">FAQ</span>
-        <h2 class="section-title" id="faq-title">Pertanyaan yang sering muncul.</h2>
-        <details><summary>Apa perbedaan Athena Strategic Hub dan Athena Practice System?</summary><p>Athena Strategic Hub adalah website utama dan rumah bagi berbagai inisiatif Athena. Athena Practice System adalah platform latihan dan simulasi ujian yang bisa diakses melalui <a href="https://aps.athenahub.id/" style="color:#2563eb;font-weight:700">aps.athenahub.id</a>.</p></details>
-        <details><summary>Bagaimana cara mulai menggunakan APS?</summary><p>Klik tombol “Buka APS”, kemudian masuk atau mendaftar melalui halaman Athena Practice System. Akun dan aktivitas latihan dikelola langsung di platform APS.</p></details>
-        <details><summary>Apakah Athena Hub akan memiliki platform lain?</summary><p>Website ini disiapkan sebagai pusat berbagai inisiatif Athena ke depan. Untuk saat ini, platform yang tersedia melalui hub adalah Athena Practice System.</p></details>
+        <h2 class="section-title">Pertanyaan Sering Diajukan</h2>
+        <div style="margin-top: 32px;">
+          <details>
+            <summary>Apa perbedaan Athena Strategic Hub dan Athena Practice System?</summary>
+            <p>
+              Athena Strategic Hub adalah platform utama dan rumah bagi seluruh ekosistem serta filosofi belajar Athena. Sedangkan Athena Practice System (APS) adalah platform spesifik untuk latihan soal dan simulasi ujian yang diakses melalui aps.athenahub.id.
+            </p>
+          </details>
+          <details>
+            <summary>Bagaimana cara mulai menggunakan Athena Practice System (APS)?</summary>
+            <p>
+              Anda dapat menekan tombol "Buka APS" atau "Masuk ke Athena Practice System", kemudian melakukan pendaftaran akun di platform APS untuk langsung mulai berlatih.
+            </p>
+          </details>
+          <details>
+            <summary>Apakah Athena Strategic Hub akan menghadirkan program lainnya?</summary>
+            <p>
+              Ya, Hub ini disiapkan sebagai pusat berbagai inisiatif pengembangan profesional ke depan. Saat ini, fokus utama platform interaktif yang tersedia adalah Athena Practice System.
+            </p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <section class="footer-cta" aria-labelledby="cta-title">
+    <!-- 8. FOOTER CTA -->
+    <section class="footer-cta">
       <div class="container">
-        <span class="eyebrow">Your next step</span>
-        <h2 id="cta-title">Kemajuan dimulai dari cara kita belajar hari ini.</h2>
-        <p>Mulai eksplorasi Anda bersama Athena Practice System.</p>
-        <a class="btn btn-primary" href="https://aps.athenahub.id/">Explore APS <span class="arrow" aria-hidden="true">↗</span></a>
+        <div class="badge-style" style="margin-bottom: 16px;">Langkah Selanjutnya</div>
+        <h2 class="section-title" style="margin-bottom: 12px;">
+          Kemajuan dimulai dari cara kita belajar hari ini.
+        </h2>
+        <p style="color: var(--muted); margin-bottom: 28px; font-size: 16px;">
+          Mulai eksplorasi persiapan dan latihan Anda bersama Athena Practice System.
+        </p>
+        <a href="https://aps.athenahub.id/" class="btn-primary">
+          Explore APS ↗
+        </a>
       </div>
     </section>
+
   </main>
 
+  <!-- 9. SITE FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <a class="brand" href="#beranda" aria-label="Athena Strategic Hub, kembali ke atas"><span class="brand-mark" aria-hidden="true">A</span><span class="brand-name">ATHENA STRATEGIC HUB<small>THINK · TRAIN · ENDURE</small></span></a>
-      <div class="footer-copy">© <span id="year">2026</span> Athena Strategic Hub. All rights reserved.</div>
-      <nav class="footer-links" aria-label="Navigasi footer"><a href="#tentang">Tentang</a><a href="#platform">Platform</a><a href="https://aps.athenahub.id/">Buka APS ↗</a></nav>
+      <a href="#beranda" class="logo-style" style="font-size: 15px;">
+        <span class="logo-mark" style="width: 24px; height: 24px; font-size: 12px;">A</span>
+        <span>Athena Strategic Hub</span>
+      </a>
+      <div class="footer-copy">
+        © <span id="year">2026</span> Athena Strategic Hub. All rights reserved.
+      </div>
+      <nav class="footer-links" aria-label="Navigasi Footer">
+        <a href="#tentang">Tentang</a>
+        <a href="#platform">Platform</a>
+        <a href="https://aps.athenahub.id/">Buka APS ↗</a>
+      </nav>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
