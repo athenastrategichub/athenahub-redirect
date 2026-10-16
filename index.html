@@ -67,14 +67,20 @@
     .brand-copy { display: grid; line-height: 1.18; }
     .brand-name { font-size: 16px; font-weight: 850; letter-spacing: 0.025em; }
     .brand-sub { color: #66758b; font-size: 10px; letter-spacing: 0.15em; font-weight: 750; margin-top: 5px; }
+    
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-link { font-size: 14px; font-weight: 650; color: var(--muted); transition: color 180ms ease; }
+    .nav-link:hover { color: var(--blue); }
+
     .header-cta {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px;
       padding: 11px 16px; border: 1px solid #dfe7f6; background: #fff;
       border-radius: 11px; color: #1a3779; font-size: 13px; font-weight: 750;
-      transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+      transition: color 180ms ease, background 180ms ease, border-color 180ms ease, transform 180ms ease;
     }
-    .header-cta:hover { color: var(--blue); border-color: #b7ccfd; background: #f5f8ff; }
-    .arrow { display: inline-block; font-size: 17px; line-height: 1; transform: translateY(-1px); }
+    .header-cta:hover { color: var(--blue); border-color: #b7ccfd; background: #f5f8ff; transform: translateY(-1px); }
+    .arrow { display: inline-block; font-size: 17px; line-height: 1; transform: translateY(-1px); transition: transform 180ms ease; }
+    .header-cta:hover .arrow { transform: translate(2px, -2px); }
 
     /* Hero */
     .hero {
@@ -116,12 +122,13 @@
     }
     .button-primary { background: var(--blue); color: #fff; box-shadow: 0 14px 25px -14px rgba(36, 87, 232, .65); }
     .button-primary:hover { background: var(--blue-deep); box-shadow: 0 18px 29px -14px rgba(36, 87, 232, .65); transform: translateY(-2px); }
+    .button-primary:hover .arrow { transform: translate(2px, -2px); }
     .button-text { color: #375074; padding-inline: 8px; }
     .button-text:hover { color: var(--blue); }
     .hero-footnote { margin-top: 31px; display: flex; align-items: center; gap: 8px; color: #76859a; font-size: 12px; }
     .hero-footnote svg { flex-shrink: 0; color: #4775d7; }
 
-    /* Deliberately abstract brand illustration; no mock usage metrics. */
+    /* Hero Art */
     .hero-art {
       position: relative; display: grid; place-items: center;
       min-height: 408px; isolation: isolate;
@@ -160,12 +167,46 @@
     .art-label.bottom { bottom: 58px; left: 24px; }
     .art-caption { position: absolute; bottom: 27px; right: 30px; color: #8798b6; font-size: 10px; font-weight: 800; letter-spacing: .19em; }
 
+    /* Values / Pillars Section */
+    .pillars-section {
+      padding: 60px 0 30px;
+      background: linear-gradient(180deg, #fff 0%, #f8faff 100%);
+      border-top: 1px solid #f0f3f9;
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .pillar-card {
+      background: #fff;
+      border: 1px solid #e4eaf4;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 30px -15px rgba(28, 55, 112, 0.08);
+      transition: transform 200s ease, box-shadow 200ms ease, border-color 200ms ease;
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -20px rgba(36, 87, 232, 0.15);
+      border-color: #b7ccfd;
+    }
+    .pillar-icon {
+      width: 44px; height: 44px; border-radius: 12px; background: #eef3ff; color: var(--blue);
+      display: grid; place-items: center; margin-bottom: 20px;
+    }
+    .pillar-icon svg { width: 22px; height: 22px; }
+    .pillar-card h3 { font-size: 18px; font-weight: 800; margin: 0 0 10px; letter-spacing: -.02em; }
+    .pillar-card p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.7; }
+
     /* Platform */
-    .platform-section { padding: 71px 0 105px; border-top: 1px solid #f0f3f9; }
-    .section-head { max-width: 670px; margin-bottom: 30px; }
+    .platform-section { padding: 71px 0 105px; background: #f8faff; }
+    .section-head { max-width: 670px; margin-bottom: 35px; }
     .section-kicker { font-size: 11px; letter-spacing: .17em; font-weight: 850; color: #315ac3; text-transform: uppercase; }
     .section-head h2 { font-size: clamp(27px, 3vw, 38px); letter-spacing: -.04em; line-height: 1.25; margin: 12px 0 9px; }
     .section-head p { color: var(--muted); margin: 0; font-size: 15px; line-height: 1.75; }
+    
     .product-card {
       display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px, .9fr);
       background: #fff; border: 1px solid #dfe7f4; border-radius: 22px; overflow: hidden;
@@ -186,6 +227,7 @@
     .product-detail > p { margin: 0; max-width: 535px; font-size: 15px; line-height: 1.8; color: var(--muted); }
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 21px 0 29px; }
     .chip { font-size: 12px; font-weight: 650; color: #476080; padding: 7px 11px; border: 1px solid #e2e9f2; border-radius: 100px; background: #f8faff; }
+    
     .product-visual {
       position: relative; display: grid; place-items: center; overflow: hidden;
       background: linear-gradient(135deg, #eaf1ff 0%, #dce8ff 100%);
@@ -215,19 +257,93 @@
     .preview-row-title { font-size: 11px; color: #1e3052; font-weight: 790; line-height: 1.4; }
     .preview-row-sub { font-size: 10px; color: #8190a8; }
 
-    /* Quiet future-facing note (not a fictitious product) */
+    /* Interactive Feature Switcher Demo */
+    .interactive-demo {
+      padding: 80px 0;
+      background: #fff;
+      border-top: 1px solid #f0f3f9;
+    }
+    .demo-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      margin-top: 40px;
+    }
+    .demo-tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .demo-tab {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid #e4eaf4;
+      background: #fff;
+      cursor: pointer;
+      text-align: left;
+      transition: all 200ms ease;
+    }
+    .demo-tab.active {
+      border-color: var(--blue);
+      background: #f4f7ff;
+      box-shadow: 0 10px 25px -10px rgba(36, 87, 232, 0.2);
+    }
+    .demo-tab-num {
+      width: 28px; height: 28px; border-radius: 50%; background: #e4eaf4; color: var(--muted);
+      display: grid; place-items: center; font-weight: 750; font-size: 12px; flex-shrink: 0;
+      transition: all 200ms ease;
+    }
+    .demo-tab.active .demo-tab-num {
+      background: var(--blue); color: #fff;
+    }
+    .demo-tab-content h4 { margin: 0 0 4px; font-size: 16px; font-weight: 780; color: var(--navy); }
+    .demo-tab-content p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
+    
+    .demo-screen {
+      background: linear-gradient(135deg, #111d3b 0%, #1a2c56 100%);
+      border-radius: 24px;
+      padding: 35px;
+      color: #fff;
+      box-shadow: 0 25px 50px -25px rgba(17, 29, 59, 0.5);
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+    .demo-screen::before {
+      content: ""; position: absolute; width: 300px; height: 300px; right: -100px; bottom: -100px;
+      background: radial-gradient(circle, rgba(36, 87, 232, 0.4) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .screen-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; }
+    .screen-badge { font-size: 10px; font-weight: 850; letter-spacing: 0.15em; color: #739aff; text-transform: uppercase; }
+    .screen-body { margin-block: 25px; }
+    .screen-title { font-size: 22px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.02em; }
+    .screen-desc { font-size: 14px; color: #a1b2d0; line-height: 1.7; margin: 0; }
+    .screen-footer-stat { display: flex; gap: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; }
+    .stat-item span:first-child { display: block; font-size: 18px; font-weight: 800; color: #fff; }
+    .stat-item span:last-child { display: block; font-size: 11px; color: #8496b8; }
+
+    /* Quiet future-facing note */
     .future-note {
       display: flex; align-items: center; justify-content: center; gap: 9px;
-      margin-top: 26px; color: #7e8a9e; text-align: center; font-size: 12px;
+      margin-top: 36px; color: #7e8a9e; text-align: center; font-size: 12px;
     }
     .future-note svg { color: #6c8bcc; flex-shrink: 0; }
 
     /* Footer */
-    .site-footer { border-top: 1px solid var(--line); background: #fbfcff; padding: 27px 0; }
+    .site-footer { border-top: 1px solid var(--line); background: #fbfcff; padding: 35px 0; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
     .footer-brand { font-size: 12px; font-weight: 850; letter-spacing: .03em; color: #415474; }
     .copyright { font-size: 12px; color: #8491a3; margin: 0; }
 
+    /* Responsive Queries */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr 0.8fr; gap: 24px; padding-block: 76px; }
       .hero-art { min-height: 360px; }
@@ -235,9 +351,12 @@
       .art-label.top { top: 35px; right: 14px; }
       .art-label.bottom { bottom: 38px; left: 14px; }
       .product-card { grid-template-columns: 1fr .85fr; }
+      .pillars-grid { grid-template-columns: 1fr; gap: 16px; }
+      .demo-container { grid-template-columns: 1fr; gap: 30px; }
     }
     @media (max-width: 700px) {
       .nav { min-height: 70px; }
+      .nav-links { display: none; }
       .hero-inner { grid-template-columns: minmax(0, 1fr); padding: 67px 0 54px; gap: 42px; }
       .hero-copy { text-align: center; }
       .hero-description { margin-inline: auto; }
@@ -284,8 +403,8 @@
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .button, .header-cta, .product-card { transition: none; }
-      .button-primary:hover { transform: none; }
+      .button, .header-cta, .product-card, .pillar-card { transition: none; }
+      .button-primary:hover, .pillar-card:hover { transform: none; }
     }
   </style>
 </head>
@@ -302,6 +421,11 @@
         </span>
         <span class="brand-copy"><span class="brand-name">ATHENA</span><span class="brand-sub">STRATEGIC HUB</span></span>
       </a>
+      <div class="nav-links">
+        <a href="#pillars" class="nav-link">Filosofi</a>
+        <a href="#platform" class="nav-link">Platform</a>
+        <a href="#features" class="nav-link">Fitur Unggulan</a>
+      </div>
       <nav aria-label="Navigasi utama">
         <a class="header-cta" href="https://aps.athenahub.id/">Buka APS <span aria-hidden="true" class="arrow">↗</span></a>
       </nav>
@@ -309,13 +433,14 @@
   </header>
 
   <main id="main">
+    <!-- Hero Section -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-inner">
         <div class="hero-copy">
           <div class="eyebrow">Welcome to Athena Strategic Hub</div>
           <h1 id="hero-heading">Think.<br />Train. <span class="blue">Endure.</span></h1>
           <p class="hero-description">
-            Ruang untuk terus belajar, mengasah kemampuan, dan bertumbuh sebagai profesional.
+            Ruang untuk terus belajar, mengasah kemampuan, dan bertumbuh sebagai profesional. 
             Dimulai dari satu platform, dengan visi yang terus berkembang.
           </p>
           <div class="hero-actions">
@@ -347,6 +472,41 @@
       </div>
     </section>
 
+    <!-- Core Pillars Section -->
+    <section class="pillars-section" id="pillars">
+      <div class="container">
+        <div class="section-head" style="margin-inline: auto; text-align: center;">
+          <div class="section-kicker">Filosofi Kami</div>
+          <h2>Fondasi Menuju Keunggulan Profesional</h2>
+          <p>Tiga nilai utama yang mendasari setiap sistem, materi, dan program pelatihan yang kami bangun.</p>
+        </div>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            </div>
+            <h3>Think</h3>
+            <p>Memahami konsep mendalam dengan kerangka berpikir kritis yang terstruktur, bukan sekadar menghafal teori.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            </div>
+            <h3>Train</h3>
+            <p>Latihan konsisten melalui simulasi kasus nyata dan bank soal berstandar ujian sertifikasi profesional internasional.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Endure</h3>
+            <p>Membangun ketahanan mental dan kedisiplinan jangka panjang untuk menghadapi dinamika karier dan ujian tingkat tinggi.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Section -->
     <section class="platform-section" id="platform" aria-labelledby="platform-heading">
       <div class="container">
         <div class="section-head">
@@ -355,7 +515,6 @@
           <p>Saat ini, perjalanan Athena dimulai melalui satu platform yang dirancang untuk mendukung persiapan sertifikasi profesional.</p>
         </div>
 
-        <!-- Tambahkan kartu platform baru di section ini saat produk Athena berikutnya benar-benar tersedia. -->
         <article class="product-card">
           <div class="product-detail">
             <div class="product-header">
@@ -369,7 +528,7 @@
             </div>
             <h3>Athena Practice System</h3>
             <p>
-              Teman belajar untuk persiapan ujian <strong>Certified Internal Auditor (CIA)</strong>.
+              Teman belajar untuk persiapan ujian <strong>Certified Internal Auditor (CIA)</strong>. 
               Berlatih melalui soal, menguji pemahaman, dan melihat perkembangan belajar dengan lebih jelas.
             </p>
             <div class="chips" aria-label="Fitur utama APS">
@@ -394,6 +553,62 @@
           </div>
         </article>
 
+        <!-- Interactive Feature Switcher Demo -->
+        <div class="interactive-demo" id="features">
+          <div class="section-head" style="margin-bottom: 20px;">
+            <div class="section-kicker">Interaktif</div>
+            <h2>Dirancang untuk Hasil yang Terukur</h2>
+            <p>Pilih fitur di bawah untuk melihat bagaimana Athena Practice System mendampingi langkah sukses Anda.</p>
+          </div>
+          <div class="demo-container">
+            <div class="demo-tabs" role="tablist">
+              <button class="demo-tab active" role="tab" aria-selected="true" onclick="switchDemo(0)">
+                <span class="demo-tab-num">1</span>
+                <div class="demo-tab-content">
+                  <h4>Bank Soal &amp; Latihan CIA</h4>
+                  <p>Materi latihan komprehensif yang dirancang menyerupai format dan tingkat kesulitan ujian sertifikasi internasional.</p>
+                </div>
+              </button>
+              <button class="demo-tab" role="tab" aria-selected="false" onclick="switchDemo(1)">
+                <span class="demo-tab-num">2</span>
+                <div class="demo-tab-content">
+                  <h4>Analisis Performa Real-Time</h4>
+                  <p>Laporan visual yang mendetail untuk mengidentifikasi topik mana yang sudah dikuasai dan area yang perlu perhatian ekstra.</p>
+                </div>
+              </button>
+              <button class="demo-tab" role="tab" aria-selected="false" onclick="switchDemo(2)">
+                <span class="demo-tab-num">3</span>
+                <div class="demo-tab-content">
+                  <h4>Simulasi Ujian Adaptif</h4>
+                  <p>Uji kesiapan mental dan manajemen waktu dengan mode ujian simulasi berwaktu yang akurat.</p>
+                </div>
+              </button>
+            </div>
+            <div class="demo-screen" id="demoScreenBox">
+              <div>
+                <div class="screen-header">
+                  <span class="screen-badge" id="screenBadge">Fitur 01</span>
+                  <span style="font-size: 11px; color: #739aff;">APS Engine v2.4</span>
+                </div>
+                <div class="screen-body">
+                  <h3 class="screen-title" id="screenTitle">Bank Soal &amp; Latihan CIA</h3>
+                  <p class="screen-desc" id="screenDesc">Asah ketajaman analisis Anda dengan ribuan skenario soal pilihan ganda berbasis standar Institute of Internal Auditors (IIA), lengkap dengan pembahasan mendalam di setiap jawabannya.</p>
+                </div>
+              </div>
+              <div class="screen-footer-stat">
+                <div class="stat-item">
+                  <span id="statVal1">100%</span>
+                  <span id="statLbl1">Standar IIA</span>
+                </div>
+                <div class="stat-item">
+                  <span id="statVal2">Akurat</span>
+                  <span id="statLbl2">Pembahasan Detail</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <p class="future-note">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18"/></svg>
           Athena Strategic Hub dirancang untuk tumbuh bersama platform dan inisiatif berikutnya.
@@ -408,8 +623,56 @@
       <p class="copyright">© <span id="year">2026</span> Athena Strategic Hub. All rights reserved.</p>
     </div>
   </footer>
+
   <script>
     document.getElementById("year").textContent = String(new Date().getFullYear());
+
+    // Interactive Demo Switcher Script
+    const demoData = [
+      {
+        badge: "Fitur 01",
+        title: "Bank Soal & Latihan CIA",
+        desc: "Asah ketajaman analisis Anda dengan ribuan skenario soal pilihan ganda berbasis standar Institute of Internal Auditors (IIA), lengkap dengan pembahasan mendalam di setiap jawabannya.",
+        val1: "100%", lbl1: "Standar IIA",
+        val2: "Akurat", lbl2: "Pembahasan Detail"
+      },
+      {
+        badge: "Fitur 02",
+        title: "Analisis Performa Real-Time",
+        desc: "Laporan visual yang mendetail untuk mengidentifikasi topik mana yang sudah dikuasai dan area yang perlu perhatian ekstra sebelum hari ujian tiba.",
+        val1: "Insight", lbl1: "Metrik Belajar",
+        val2: "Fokus", lbl2: "Area Perbaikan"
+      },
+      {
+        badge: "Fitur 03",
+        title: "Simulasi Ujian Adaptif",
+        desc: "Uji kesiapan mental dan manajemen waktu dengan mode ujian simulasi berwaktu yang mereplikasi suasana ujian sesungguhnya.",
+        val1: "Realistis", lbl1: "Simulasi Ujian",
+        val2: "Manajemen", lbl2: "Waktu Teruji"
+      }
+    ];
+
+    function switchDemo(index) {
+      const tabs = document.querySelectorAll('.demo-tab');
+      tabs.forEach((tab, i) => {
+        if(i === index) {
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+        } else {
+          tab.classList.remove('active');
+          tab.setAttribute('aria-selected', 'false');
+        }
+      });
+
+      const data = demoData[index];
+      document.getElementById('screenBadge').textContent = data.badge;
+      document.getElementById('screenTitle').textContent = data.title;
+      document.getElementById('screenDesc').textContent = data.desc;
+      document.getElementById('statVal1').textContent = data.val1;
+      document.getElementById('statLbl1').textContent = data.lbl1;
+      document.getElementById('statVal2').textContent = data.val2;
+      document.getElementById('statLbl2').textContent = data.lbl2;
+    }
   </script>
 </body>
 </html>
