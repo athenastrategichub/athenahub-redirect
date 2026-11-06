@@ -309,8 +309,26 @@
     }
     
     @media (max-width: 700px) {
-      .nav { min-height: 64px; }
-      .nav-links { display: none; }
+ 
+.nav {
+  min-height: 64px;
+  flex-wrap: wrap;
+  padding-block: 10px;
+}
+
+.nav-links {
+  display: flex;
+  order: 3;
+  width: 100%;
+  justify-content: center;
+  gap: clamp(12px, 3vw, 24px);
+  padding: 6px 0 2px;
+}
+
+.nav-link {
+  font-size: 11px;
+  white-space: nowrap;
+}
       .hero-inner { grid-template-columns: minmax(0, 1fr); padding: 48px 0 40px; gap: 32px; }
       .hero-copy { text-align: center; }
       .hero-description { margin-inline: auto; max-width: 100%; }
