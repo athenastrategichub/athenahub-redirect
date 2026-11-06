@@ -633,49 +633,161 @@
       </div>
     </section>
 
-    
-<!-- Legal Information -->
-<section id="legal" style="padding:55px 0; background:#fff; border-top:1px solid #e4eaf4;">
-  <div class="container">
-    <div class="section-head">
-      <div class="section-kicker">Legal Information</div>
-      <h2>Informasi Legal Athena Hub</h2>
-      <p>
-        Athena Hub dikembangkan dan dikelola secara resmi
-        oleh PT Athena Strategic Hub, badan hukum
-        Perseroan Perorangan yang terdaftar di Indonesia.
-      </p>
-    </div>
-
-    <div style="color:#596981; font-size:14px; line-height:2;">
-      <p><strong>Pengelola:</strong> PT Athena Strategic Hub</p>
-      <p><strong>Bentuk Badan Hukum:</strong> Perseroan Perorangan</p>
-      <p><strong>SK Perubahan AHU:</strong> AHU-A017436.AH.01.31.Tahun 2026</p>
-      <p><strong>NIB:</strong> 0611260036834</p>
-      <p><strong>Domisili:</strong> Kota Depok, Jawa Barat, Indonesia</p>
-    </div>
-  </div>
-</section>
+ 
 
   </main>
 
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div>
-      <span class="footer-brand">ATHENA HUB</span>
-      <p class="copyright">Think. Train. Endure.</p>
-      <p class="copyright" style="margin-top:8px;">
-        Developed &amp; managed by PT Athena Strategic Hub
-      </p>
+<footer class="site-footer" style="
+  background:linear-gradient(135deg,#101d3b,#132a56 70%,#153b7b);
+  color:#fff;
+  padding:52px 0 22px;
+  border-top:0;
+">
+  <div class="container">
+
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:36px;
+      align-items:start;
+    ">
+
+      <!-- Brand -->
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="
+            display:grid;place-items:center;
+            width:40px;height:40px;
+            border-radius:11px;
+            background:#2457e8;
+            color:white;
+          ">
+            <svg width="24" height="24" viewBox="0 0 40 40" fill="none">
+              <path d="M7 31L20 7L33 31M13.3 23H26.7"
+                stroke="currentColor"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <strong style="font-size:17px;letter-spacing:.07em;">
+            ATHENA HUB
+          </strong>
+        </div>
+
+        <p style="
+          font-size:21px;font-weight:800;
+          letter-spacing:-.03em;
+          margin:20px 0 8px;
+          color:#fff;
+        ">
+          Think. Train. Endure.
+        </p>
+
+        <p style="
+          font-size:13px;
+          line-height:1.8;
+          color:#b9c8e4;
+          max-width:300px;
+          margin:0;
+        ">
+          Empowering professionals through
+          learning and technology.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <p style="
+          font-size:11px;font-weight:800;
+          letter-spacing:.14em;
+          color:#93b4fb;
+          margin:0 0 18px;
+        ">
+          EXPLORE
+        </p>
+
+        <div style="display:grid;gap:13px;font-size:13px;color:#e5edff;">
+          <a href="#about">About Us</a>
+          <a href="#platform">Our Ecosystem</a>
+          <a href="#upcoming">Upcoming Solutions</a>
+        </div>
+      </div>
+
+      <!-- Featured Platform -->
+      <div>
+        <p style="
+          font-size:11px;font-weight:800;
+          letter-spacing:.14em;
+          color:#93b4fb;
+          margin:0 0 18px;
+        ">
+          FEATURED PLATFORM
+        </p>
+
+        <div style="
+          background:rgba(255,255,255,.06);
+          border:1px solid rgba(255,255,255,.12);
+          padding:20px;
+          border-radius:14px;
+        ">
+          <strong style="font-size:15px;color:#fff;">
+            Athena Practice System
+          </strong>
+
+          <p style="
+            color:#b9c8e4;
+            font-size:12px;
+            line-height:1.7;
+            margin:8px 0 18px;
+          ">
+            Professional Learning &amp;
+            Exam Preparation
+          </p>
+
+          <a href="https://aps.athenahub.id/"
+             style="
+               display:inline-block;
+               background:#fff;
+               color:#173a83;
+               padding:10px 17px;
+               border-radius:9px;
+               font-size:12px;
+               font-weight:800;
+             ">
+            Explore APS &#8599;
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <p class="copyright">
-      © <span id="year">2026</span> Athena Hub.
-      All rights reserved.
-    </p>
+    <!-- Footer Bottom -->
+    <div style="
+      border-top:1px solid rgba(255,255,255,.14);
+      margin-top:40px;
+      padding-top:20px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px 24px;
+    ">
+      <span style="font-size:11px;color:#b9c8e4;">
+        Developed &amp; managed by
+        <strong style="color:#fff;">PT Athena Strategic Hub</strong>
+      </span>
+
+      <span style="font-size:11px;color:#94a8ca;">
+        © <span id="year">2026</span>
+        Athena Hub. All rights reserved.
+      </span>
+    </div>
+
   </div>
 </footer>
+
 
   <script>
     document.getElementById("year").textContent = String(new Date().getFullYear());
