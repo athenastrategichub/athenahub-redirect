@@ -423,6 +423,76 @@
   color: #4b5e78;
 }
 
+/* Corporate & Partnerships */
+.business-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 0 0 48px;
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: 20px;
+  background: linear-gradient(120deg, #111d3b, #1b4389);
+  color: #ffffff;
+}
+
+.business-callout > div {
+  max-width: 670px;
+}
+
+.business-kicker {
+  margin: 0 0 10px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .13em;
+  color: #a9c6ff;
+}
+
+.business-callout h3 {
+  margin: 0 0 12px;
+  font-size: clamp(23px, 3vw, 32px);
+  line-height: 1.25;
+  letter-spacing: -.025em;
+}
+
+.business-callout p:not(.business-kicker) {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #d1dff5;
+}
+
+.business-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding: 13px 19px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #183b7c;
+  font-size: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.business-cta:hover {
+  background: #eaf1ff;
+}
+
+@media (max-width: 700px) {
+  .business-callout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .business-cta {
+    width: 100%;
+  }
+}
+
   </style>
   
 
@@ -474,7 +544,7 @@
 <div class="nav-links">
   <a href="#about" class="nav-link">About Us</a>
   <a href="#platform" class="nav-link">Ecosystem</a>
-  <a href="#upcoming" class="nav-link">Upcoming Apps</a>
+  <a href="#business" class="nav-link">For Business</a>
 </div>
 
       <nav aria-label="Navigasi utama">
@@ -612,6 +682,40 @@
             </div>
           </div>
         </article>
+
+<!-- Corporate & Partnerships -->
+<section
+  id="business"
+  class="business-callout"
+  aria-labelledby="business-title"
+>
+  <div>
+    <p class="business-kicker">
+      CORPORATE & PARTNERSHIPS
+    </p>
+
+    <h3 id="business-title">
+      Kembangkan Kompetensi Tim Bersama Athena.
+    </h3>
+
+    <p>
+      Solusi pembelajaran dan persiapan sertifikasi
+      IAP serta CIA untuk organisasi. Diskusikan
+      akses kelompok, simulasi ujian, dan program
+      cohort melalui Athena Practice System.
+    </p>
+  </div>
+
+  
+<a
+  class="business-cta"
+  href="mailto:athenastrategichub@gmail.com?subject=Permintaan%20Kerja%20Sama%20B2B%20Athena%20Hub"
+>
+  Diskusikan Kerja Sama
+  <span aria-hidden="true">↗</span>
+</a>
+
+</section>
 
         <!-- Upcoming Ecosystem & GRC Solutions -->
         <div class="section-head" id="upcoming" style="margin-top: 50px;">
@@ -785,11 +889,22 @@
           EXPLORE
         </p>
 
-        <div style="display:grid;gap:13px;font-size:13px;color:#e5edff;">
-          <a href="#about">About Us</a>
-          <a href="#platform">Our Ecosystem</a>
-          <a href="#upcoming">Upcoming Solutions</a>
-        </div>
+        
+<div style="display:grid;gap:13px;font-size:13px;color:#e5edff;">
+  <a href="#about">About Us</a>
+  <a href="#platform">Our Ecosystem</a>
+  <a href="#upcoming">Upcoming Solutions</a>
+  <a href="#business">Corporate &amp; Partnerships</a>
+  
+<a
+  href="mailto:athenastrategichub@gmail.com"
+  style="font-size:12px;overflow-wrap:anywhere;"
+>
+  athenastrategichub@gmail.com
+</a>
+
+</div>
+
       </div>
 
       <!-- Featured Platform -->
