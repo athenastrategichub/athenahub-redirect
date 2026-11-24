@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#ffffff">
   <meta name="color-scheme" content="light">
+
   <title>Athena Hub | One Ecosystem. Endless Possibilities.</title>
-  <meta name="description" content="Athena Hub adalah ekosistem digital untuk pendidikan, pengembangan profesional, keuangan pribadi, bisnis, homesteading, produktivitas, dan inovasi berbasis AI. Dikembangkan oleh PT Athena Strategic Hub.">
+  <meta name="description" content="Athena Hub adalah ekosistem digital yang menghubungkan pendidikan, pengembangan profesional, keuangan pribadi, pengelolaan bisnis, dan kehidupan berkelanjutan. Dikembangkan oleh PT Athena Strategic Hub.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://athenahub.id/">
   <link rel="icon" type="image/png" href="/athenahub-logo.png?v=2">
@@ -15,10 +16,11 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Athena Hub | One Ecosystem. Endless Possibilities.">
-  <meta property="og:description" content="One ecosystem for learning, growth, finance, business, sustainable living, and intelligent solutions.">
+  <meta property="og:description" content="An integrated ecosystem for education, professional growth, personal finance, business, and sustainable living.">
   <meta property="og:url" content="https://athenahub.id/">
   <meta property="og:site_name" content="Athena Hub">
   <meta property="og:locale" content="id_ID">
+  <meta property="og:image" content="https://athenahub.id/athenahub-logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,50 +34,49 @@
     "url":"https://athenahub.id/",
     "logo":"https://athenahub.id/athenahub-logo.png",
     "email":"athenastrategichub@gmail.com",
-    "description":"Perusahaan pengembang ekosistem digital Athena Hub."
+    "description":"Perusahaan Indonesia yang mengembangkan ekosistem digital Athena Hub."
   }
   </script>
 
   <style>
     :root{
-      --navy:#14233e;
-      --navy2:#1b3458;
+      --navy:#12223f;
+      --navy2:#1b355e;
       --blue:#2457e8;
-      --blue2:#1745bf;
-      --ink:#192943;
-      --muted:#61718a;
+      --blue2:#1746c3;
+      --ink:#1b2b46;
+      --muted:#60718b;
       --line:#e3eaf4;
-      --soft:#f6f8fc;
-      --white:#ffffff;
+      --soft:#f7f9fd;
       --green:#16815d;
-      --r:14px;
-      --shadow:0 12px 38px -29px rgba(20,45,88,.35);
+      --white:#fff;
+      --shadow:0 14px 40px -32px rgba(20,45,90,.42);
     }
 
     *,*::before,*::after{box-sizing:border-box}
 
     html{
       scroll-behavior:smooth;
-      scroll-padding-top:88px;
+      scroll-padding-top:85px;
     }
 
     body{
       margin:0;
       min-width:320px;
-      color:var(--ink);
       background:var(--white);
-      font:400 13px/1.65 "Plus Jakarta Sans",Arial,sans-serif;
+      color:var(--ink);
+      font:400 13px/1.7 "Plus Jakarta Sans",Arial,sans-serif;
       -webkit-font-smoothing:antialiased;
     }
 
     a{color:inherit;text-decoration:none}
     button{font:inherit}
-    img{max-width:100%;display:block}
+    img{display:block;max-width:100%}
     svg{display:block}
     h1,h2,h3,h4,p{margin-top:0}
-    h1,h2,h3,h4{line-height:1.25;letter-spacing:-.035em}
+    h1,h2,h3,h4{line-height:1.22;letter-spacing:-.035em}
     strong{font-weight:800}
-    section[id],div[id]{scroll-margin-top:84px}
+    section[id]{scroll-margin-top:85px}
 
     a:focus-visible,button:focus-visible{
       outline:3px solid #8fb1ff;
@@ -83,100 +84,25 @@
     }
 
     .container{
-      width:min(1160px,calc(100% - 40px));
+      width:min(1160px,calc(100% - 36px));
       margin-inline:auto;
     }
 
     .skip{
       position:absolute;
+      top:-90px;
       left:12px;
-      top:-80px;
       z-index:100;
       padding:10px 15px;
+      border-radius:8px;
       background:var(--navy);
       color:#fff;
-      border-radius:8px;
     }
     .skip:focus{top:12px}
 
-    /* COMMON */
-    .section{padding:43px 0}
-    .section.soft{background:var(--soft)}
-    .section.white{background:#fff}
-
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      color:var(--blue2);
-      font-size:10px;
-      font-weight:800;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-    }
-    .kicker::before{
-      content:"";
-      display:block;
-      width:6px;
-      height:6px;
-      border-radius:50%;
-      background:var(--blue);
-    }
-
-    .section-head{
-      display:flex;
-      justify-content:space-between;
-      align-items:end;
-      gap:16px;
-      margin-bottom:20px;
-    }
-
-    .section-head h2{
-      margin:7px 0 5px;
-      font-size:clamp(23px,2.7vw,33px);
-      font-weight:800;
-    }
-
-    .section-head p{
-      color:var(--muted);
-      margin:0;
-      font-size:12.5px;
-      max-width:680px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:9px;
-      min-height:40px;
-      padding:10px 16px;
-      border:1px solid transparent;
-      border-radius:9px;
-      font-size:12px;
-      font-weight:800;
-      line-height:1.3;
-      transition:background .18s,border-color .18s,transform .18s;
-      white-space:normal;
-      text-align:center;
-    }
-
-    .btn:hover{transform:translateY(-1px)}
-    .btn.primary{color:#fff;background:var(--blue)}
-    .btn.primary:hover{background:var(--blue2)}
-    .btn.outline{
-      color:var(--navy);
-      background:#fff;
-      border-color:#d6e0ee;
-    }
-    .btn.outline:hover{border-color:#95b1e8;background:#f8faff}
-    .btn.light{background:#fff;color:#173b80}
-    .btn.light:hover{background:#eaf1ff}
-    .btn.textlink{padding-inline:4px;color:var(--blue2)}
-
-    .icon{
-      width:19px;
-      height:19px;
+    .ico{
+      width:20px;
+      height:20px;
       flex-shrink:0;
       stroke:currentColor;
       stroke-width:1.8;
@@ -185,320 +111,397 @@
       fill:none;
     }
 
-    .arrow{font-size:15px;line-height:1}
+    .section{padding:42px 0}
+    .section.soft{background:var(--soft)}
+    .section.white{background:#fff}
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:10px;
+      font-weight:800;
+      color:var(--blue2);
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+    .eyebrow::before{
+      content:"";
+      width:6px;
+      height:6px;
+      border-radius:50%;
+      background:var(--blue);
+      box-shadow:0 0 0 4px #e9efff;
+    }
+
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:19px;
+    }
+    .section-head h2{
+      margin:7px 0 5px;
+      font-size:clamp(23px,2.7vw,32px);
+      font-weight:800;
+      color:var(--navy);
+    }
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      max-width:680px;
+      font-size:12px;
+      line-height:1.75;
+    }
+
+    .btn{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      gap:9px;
+      min-height:41px;
+      padding:10px 16px;
+      border:1px solid transparent;
+      border-radius:9px;
+      font-size:11.5px;
+      font-weight:800;
+      line-height:1.4;
+      text-align:center;
+      transition:background .18s,transform .18s,border-color .18s;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{background:var(--blue);color:#fff}
+    .btn.primary:hover{background:var(--blue2)}
+    .btn.outline{
+      background:#fff;
+      color:var(--navy);
+      border-color:#d8e1f0;
+    }
+    .btn.outline:hover{border-color:#a8bfe9;background:#f8faff}
+    .btn.light{background:#fff;color:#173d83}
+    .btn.light:hover{background:#e9f0ff}
 
     .badge{
       display:inline-flex;
       align-items:center;
-      gap:5px;
-      font-size:9px;
-      font-weight:800;
-      letter-spacing:.02em;
       border-radius:6px;
       padding:4px 8px;
-      background:#edf2fa;
-      color:#60708a;
+      font-size:9px;
+      font-weight:800;
       white-space:nowrap;
+      background:#edf1f8;
+      color:#64738c;
     }
-    .badge.active{background:#e4f5ec;color:#13764d}
-    .badge.plan{background:#edf2fa;color:#61718a}
-    .badge.progress{background:#e9f0ff;color:#2457bc}
-    .badge.private{background:#eeeafc;color:#6653a6}
+    .badge.live{background:#e5f6ed;color:#11734e}
+    .badge.build{background:#eaf0ff;color:#2458bc}
 
     /* HEADER */
     .header{
       position:sticky;
       top:0;
       z-index:50;
-      border-bottom:1px solid var(--line);
       background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--line);
       backdrop-filter:blur(14px);
       -webkit-backdrop-filter:blur(14px);
     }
 
     .nav{
+      min-height:65px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:16px;
-      min-height:66px;
+      gap:15px;
     }
 
     .brand{
-      display:flex;
+      display:inline-flex;
       align-items:center;
       gap:10px;
-      min-width:0;
       flex-shrink:0;
+      min-width:0;
     }
-
     .brand img{
       width:37px;
       height:37px;
       object-fit:cover;
       border-radius:10px;
     }
-
     .brand-copy{line-height:1.2}
-    .brand-copy b{
+    .brand-copy strong{
       display:block;
       color:var(--navy);
       font-size:14px;
-      font-weight:800;
       letter-spacing:.03em;
     }
     .brand-copy small{
       display:block;
-      color:#8190a5;
       font-size:8px;
+      color:#7e8ba0;
+      margin-top:4px;
       font-weight:700;
-      letter-spacing:.11em;
-      margin-top:3px;
     }
 
     .navlinks{
       display:flex;
       align-items:center;
-      justify-content:center;
-      gap:20px;
+      gap:19px;
     }
     .navlinks a{
-      color:#52647e;
-      font-size:11.5px;
+      font-size:11px;
       font-weight:700;
+      color:#56677e;
       white-space:nowrap;
     }
     .navlinks a:hover{color:var(--blue)}
 
-    .header-action{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
+    .header-cta{
+      flex-shrink:0;
       padding:9px 13px;
-      border:1px solid #d9e4f4;
+      border:1px solid #dce5f4;
       border-radius:9px;
       font-size:11px;
-      color:#1b4389;
       font-weight:800;
-      white-space:nowrap;
+      color:#20478e;
       background:#fff;
     }
-    .header-action:hover{background:#f3f7ff}
+    .header-cta:hover{background:#f4f7ff}
 
     /* HERO */
     .hero{
-      overflow:hidden;
       position:relative;
+      overflow:hidden;
       background:
-        radial-gradient(ellipse 48% 75% at 100% 25%,#eaf1ff 0%,transparent 80%),
-        linear-gradient(180deg,#fbfcff,#fff);
+        radial-gradient(ellipse 55% 75% at 95% 15%,#eaf1ff 0%,transparent 75%),
+        linear-gradient(180deg,#fbfcff 0%,#fff 100%);
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.04fr .96fr;
+      grid-template-columns:1fr 1fr;
       align-items:center;
-      gap:38px;
-      padding:54px 0 48px;
+      gap:35px;
+      padding:48px 0 46px;
     }
 
     .hero h1{
-      margin:14px 0 15px;
-      font-size:clamp(36px,4.3vw,58px);
-      font-weight:800;
-      line-height:1.13;
-      letter-spacing:-.052em;
+      margin:15px 0 15px;
       color:var(--navy);
+      font-size:clamp(36px,4.5vw,59px);
+      letter-spacing:-.052em;
+      line-height:1.12;
+      font-weight:800;
     }
     .hero h1 span{color:var(--blue)}
 
     .hero-desc{
-      max-width:540px;
-      color:var(--muted);
-      font-size:13.5px;
+      max-width:520px;
+      font-size:13px;
       line-height:1.85;
-      margin-bottom:20px;
+      color:var(--muted);
+      margin-bottom:21px;
     }
 
     .hero-actions{
       display:flex;
       flex-wrap:wrap;
       gap:9px;
-      margin-bottom:18px;
     }
 
-    .hero-note{
+    .hero-caption{
       display:flex;
-      flex-wrap:wrap;
       align-items:center;
-      gap:7px 15px;
-      color:#77869d;
+      gap:7px;
+      margin-top:17px;
+      color:#70819a;
       font-size:10px;
-      font-weight:600;
     }
-    .hero-note span{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-    }
-    .hero-note svg{
-      width:13px;
-      height:13px;
+    .hero-caption .ico{
+      width:14px;
+      height:14px;
       color:var(--green);
     }
 
-    /* HERO VISUAL: CSS ONLY */
-    .hero-visual{
+    /* ECOSYSTEM NETWORK */
+    .network{
       position:relative;
-      min-height:325px;
-      padding:22px;
-      border:1px solid #dfe7f5;
-      border-radius:20px;
-      background:
-        radial-gradient(circle at 80% 10%,#dfeaff 0%,transparent 48%),
-        linear-gradient(145deg,#f8faff,#eef4ff);
+      height:360px;
+      border:1px solid #dfe8f6;
+      border-radius:22px;
       overflow:hidden;
+      background:
+        radial-gradient(circle at 50% 48%,#dce9ff 0%,#edf4ff 38%,#f8fbff 77%);
       box-shadow:var(--shadow);
+      isolation:isolate;
     }
 
-    .hero-visual::before{
+    .network::before{
       content:"";
       position:absolute;
       inset:0;
-      opacity:.45;
-      background-image:radial-gradient(#b8c9e8 .8px,transparent .8px);
-      background-size:18px 18px;
+      background-image:radial-gradient(#b9cae6 .8px,transparent .8px);
+      background-size:20px 20px;
+      opacity:.34;
       pointer-events:none;
     }
 
-    .visual-top{
-      position:relative;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      margin-bottom:13px;
-    }
-    .visual-label{
-      font-size:10px;
+    .network-label{
+      position:absolute;
+      top:15px;
+      left:17px;
+      z-index:5;
+      font-size:9px;
       font-weight:800;
-      color:#426398;
-      letter-spacing:.11em;
+      letter-spacing:.12em;
+      color:#55729d;
     }
 
-    .visual-mark{
+    .network-tag{
+      position:absolute;
+      top:15px;
+      right:17px;
+      z-index:5;
       display:flex;
       align-items:center;
-      gap:5px;
-      color:#3a65b0;
+      gap:6px;
       font-size:9px;
       font-weight:700;
+      color:#5272a0;
     }
-
-    .visual-mark i{
+    .network-tag::before{
+      content:"";
       width:6px;
       height:6px;
-      background:var(--green);
+      background:#2f9c73;
       border-radius:50%;
     }
 
-    .visual-center{
-      position:relative;
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:9px;
+    .network-wires{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      pointer-events:none;
     }
 
-    .mini-card{
-      min-width:0;
-      min-height:77px;
+    .network-wires .orbit{
+      fill:none;
+      stroke:#b7cdef;
+      stroke-width:1.2;
+      stroke-dasharray:5 7;
+      opacity:.75;
+    }
+
+    .network-wires .wire{
+      fill:none;
+      stroke:#8aafe5;
+      stroke-width:1.8;
+      opacity:.75;
+    }
+
+    .network-wires .wire-soft{
+      fill:none;
+      stroke:#bfd0e9;
+      stroke-width:1.2;
+      stroke-dasharray:3 6;
+      opacity:.65;
+    }
+
+    .network-wires .dot{
+      fill:#fff;
+      stroke:#7fa8e1;
+      stroke-width:2;
+    }
+
+    .network-core{
+      position:absolute;
+      z-index:4;
+      left:50%;
+      top:49%;
+      transform:translate(-50%,-50%);
+      width:126px;
+      height:126px;
       display:flex;
       flex-direction:column;
-      justify-content:space-between;
-      padding:12px 10px;
-      border-radius:11px;
-      border:1px solid #e0e8f5;
-      background:rgba(255,255,255,.94);
-      box-shadow:0 8px 22px -17px #31568b;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      border-radius:27px;
+      background:linear-gradient(145deg,#205aca,#153675);
+      border:1px solid rgba(255,255,255,.35);
+      box-shadow:0 18px 32px -16px #2559ad;
+      color:#fff;
     }
 
-    .mini-card svg{width:20px;height:20px;color:#3569c6}
-    .mini-card strong{
+    .network-core img{
+      width:51px;
+      height:51px;
+      object-fit:cover;
+      border-radius:13px;
+      background:#fff;
+    }
+
+    .network-core strong{
       font-size:10px;
-      line-height:1.3;
-      color:#213759;
-    }
-    .mini-card small{
-      font-size:8px;
-      line-height:1.4;
-      color:#7f8da2;
+      letter-spacing:.045em;
+      white-space:nowrap;
     }
 
-    .mini-card.special{
-      background:#173c7a;
-      border-color:#173c7a;
-    }
-    .mini-card.special svg,
-    .mini-card.special strong{color:#fff}
-    .mini-card.special small{color:#c2d6ff}
-
-    .visual-bottom{
-      position:relative;
-      margin-top:10px;
+    .network-node{
+      position:absolute;
+      z-index:3;
+      transform:translate(-50%,-50%);
+      width:116px;
+      min-height:62px;
+      padding:9px 8px;
       display:flex;
       align-items:center;
-      gap:10px;
-      padding:11px 13px;
-      background:#fff;
-      border:1px solid #dfe7f5;
-      border-radius:10px;
+      gap:8px;
+      background:rgba(255,255,255,.97);
+      border:1px solid #dce6f4;
+      border-radius:11px;
+      box-shadow:0 9px 20px -15px #234c86;
     }
 
-    .visual-bottom .ai-icon{
+    .network-node .node-icon{
       display:grid;
       place-items:center;
-      width:32px;
-      height:32px;
-      background:#e9f0ff;
-      color:var(--blue);
-      border-radius:9px;
       flex-shrink:0;
+      width:29px;
+      height:29px;
+      border-radius:8px;
+      background:var(--node-bg,#eaf1ff);
+      color:var(--node-color,#3368c0);
     }
-
-    .visual-bottom strong{display:block;font-size:10.5px}
-    .visual-bottom small{display:block;color:var(--muted);font-size:9px}
-
-    /* QUICK STRIP */
-    .quick-strip{
-      border-top:1px solid #edf1f8;
-      border-bottom:1px solid #edf1f8;
-      background:#fff;
-    }
-
-    .quick-inner{
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      padding:14px 0;
-    }
-
-    .quick-item{
-      padding:5px 14px;
-      border-right:1px solid var(--line);
-      text-align:center;
-    }
-    .quick-item:first-child{padding-left:0}
-    .quick-item:last-child{border-right:0;padding-right:0}
-    .quick-item b{
+    .network-node .ico{width:16px;height:16px}
+    .network-node strong{
       display:block;
-      color:#1b3767;
-      font-size:11px;
-      font-weight:800;
-    }
-    .quick-item small{
-      display:block;
-      color:#8290a5;
+      color:#24416b;
       font-size:9px;
-      line-height:1.4;
+      line-height:1.35;
+    }
+    .network-node small{
+      display:block;
+      color:#8291a8;
+      font-size:7px;
+      line-height:1.35;
+      margin-top:2px;
+    }
+
+    .node-education{left:21%;top:21%}
+    .node-professional{left:79%;top:21%}
+    .node-finance{left:17%;top:72%}
+    .node-business{left:83%;top:72%}
+    .node-homestead{left:50%;top:89%}
+
+    .network-note{
+      position:absolute;
+      bottom:9px;
+      right:12px;
+      color:#8799b5;
+      font-size:8px;
+      z-index:4;
     }
 
     /* ECOSYSTEM */
@@ -512,9 +515,9 @@
       display:flex;
       flex-direction:column;
       min-width:0;
-      border:1px solid var(--line);
-      border-radius:var(--r);
       background:#fff;
+      border:1px solid var(--line);
+      border-radius:14px;
       padding:17px;
       box-shadow:var(--shadow);
       transition:transform .18s,border-color .18s;
@@ -522,261 +525,228 @@
 
     .eco-card:hover{
       transform:translateY(-2px);
-      border-color:#b5c9f3;
+      border-color:#bacdf1;
     }
 
-    .eco-head{
+    .eco-top{
       display:flex;
+      align-items:center;
       justify-content:space-between;
-      align-items:flex-start;
-      gap:10px;
+      gap:9px;
       margin-bottom:12px;
     }
-
     .eco-icon{
       width:37px;
       height:37px;
       flex-shrink:0;
       display:grid;
       place-items:center;
-      color:var(--accent,#2457e8);
-      background:var(--tint,#edf3ff);
       border-radius:10px;
+      color:var(--accent,#2457e8);
+      background:var(--tint,#eaf1ff);
     }
-    .eco-icon svg{width:20px;height:20px}
+    .eco-icon .ico{width:20px;height:20px}
 
     .eco-card h3{
-      font-size:15px;
-      margin:0 0 6px;
-      font-weight:800;
       color:var(--navy);
+      font-size:15px;
+      margin:0 0 7px;
+      font-weight:800;
     }
-
     .eco-card p{
-      font-size:11.5px;
-      line-height:1.7;
       color:var(--muted);
-      margin:0 0 13px;
+      font-size:11.5px;
+      line-height:1.75;
+      margin:0 0 12px;
       flex:1;
     }
 
-    .eco-tags{
+    .eco-foot{
       display:flex;
-      gap:5px;
       flex-wrap:wrap;
-      margin-bottom:11px;
-    }
-
-    .eco-tags span{
-      background:#f6f8fb;
-      border:1px solid #edf0f6;
-      padding:4px 7px;
-      border-radius:6px;
-      font-size:9px;
-      color:#65738a;
-      font-weight:600;
-    }
-
-    .eco-footer{
-      display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:8px;
-      border-top:1px solid #eef2f7;
-      padding-top:11px;
-      color:#8b98aa;
+      gap:7px;
+      padding-top:10px;
+      border-top:1px solid #edf1f7;
+      color:#78879e;
       font-size:10px;
       font-weight:700;
     }
+    .eco-foot a{color:var(--blue2)}
+    .eco-foot a:hover{text-decoration:underline}
 
-    .eco-footer a{color:var(--blue2)}
-    .eco-footer a:hover{text-decoration:underline}
-
-    /* ACTIVE PRODUCT */
+    /* FEATURED APS */
     .featured{
       display:grid;
-      grid-template-columns:1.1fr .9fr;
-      border:1px solid #dfe6f2;
-      border-radius:18px;
+      grid-template-columns:1.05fr .95fr;
+      border:1px solid #dfe7f3;
+      border-radius:17px;
       overflow:hidden;
       background:#fff;
       box-shadow:var(--shadow);
     }
 
     .featured-content{padding:25px}
-    .featured h3{
+    .featured-content h3{
+      color:var(--navy);
       font-size:clamp(23px,2.7vw,31px);
-      margin:10px 0;
+      margin:11px 0;
     }
-    .featured p{
-      margin-bottom:15px;
+    .featured-content p{
+      max-width:540px;
+      margin:0 0 15px;
       color:var(--muted);
       font-size:12px;
       line-height:1.85;
-      max-width:560px;
     }
 
-    .feature-list{
+    .feature-tags{
       display:flex;
       flex-wrap:wrap;
       gap:7px;
       margin-bottom:19px;
     }
-
-    .feature-list span{
+    .feature-tags span{
       display:inline-flex;
       align-items:center;
       gap:5px;
-      font-size:10px;
-      color:#3b557a;
-      background:#f2f6fd;
-      border-radius:7px;
+      color:#3f5b83;
+      background:#f0f5fd;
       padding:6px 9px;
+      border-radius:7px;
+      font-size:10px;
       font-weight:700;
     }
-    .feature-list svg{width:12px;height:12px;color:var(--blue)}
+    .feature-tags .ico{
+      width:12px;
+      height:12px;
+      color:var(--blue);
+    }
 
-    .feature-actions{display:flex;flex-wrap:wrap;gap:9px}
+    .featured-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
 
     .featured-art{
       display:flex;
-      flex-direction:column;
       justify-content:center;
+      align-items:center;
       padding:22px;
       background:
-        radial-gradient(circle at 85% 12%,#c4d7ff,transparent 50%),
-        linear-gradient(135deg,#edf3ff,#e3ecff);
+        radial-gradient(circle at 85% 12%,#cbdcff,transparent 52%),
+        linear-gradient(135deg,#f0f5ff,#dfeaff);
     }
 
-    .app-mock{
+    .exam-window{
+      width:100%;
+      max-width:400px;
       background:#fff;
-      border:1px solid #d6e2f3;
-      border-radius:13px;
+      border:1px solid #dce5f4;
+      border-radius:12px;
+      box-shadow:0 18px 38px -27px #254e91;
       overflow:hidden;
-      box-shadow:0 20px 40px -27px #2a4c8d;
     }
 
-    .app-top{
+    .exam-top{
       display:flex;
       align-items:center;
       justify-content:space-between;
+      padding:12px 15px;
       border-bottom:1px solid #edf1f7;
-      padding:11px 14px;
     }
-    .app-top strong{font-size:10px;color:#243c69}
-    .app-top small{font-size:9px;color:#7385a1}
-
-    .app-body{padding:15px}
-    .app-body h4{margin:0 0 4px;font-size:16px}
-    .app-body p{font-size:9px;margin:0 0 13px}
-
-    .mock-stats{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:8px;
-      margin-bottom:10px;
+    .exam-top strong{
+      font-size:10px;
+      color:#28416b;
+    }
+    .exam-top small{
+      font-size:9px;
+      color:#8090a7;
     }
 
-    .mock-stat{
-      background:#f6f8fe;
-      border-radius:8px;
-      padding:10px;
+    .exam-body{padding:15px}
+    .exam-title{
+      font-size:15px;
+      font-weight:800;
+      margin-bottom:4px;
+      color:#1e3457;
     }
-    .mock-stat b{font-size:14px;display:block;color:#234d9d}
-    .mock-stat small{font-size:9px;color:#7888a0}
-
-    .mock-row{
+    .exam-sub{
+      font-size:9px;
+      color:#8291a7;
+      margin-bottom:13px;
+    }
+    .exam-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:9px;
       border:1px solid #edf1f7;
       border-radius:8px;
-      padding:9px 10px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:8px;
+      padding:10px 11px;
       margin-top:7px;
     }
-    .mock-row span{font-size:10px;font-weight:700;color:#334b6f}
-    .mock-row small{
-      padding:3px 7px;
-      border-radius:5px;
-      background:#eaf1ff;
-      color:#2858b1;
-      font-size:8px;
+    .exam-row strong{
+      display:block;
+      font-size:10px;
+      color:#334b72;
     }
-
-    .mock-foot{
-      margin-top:10px;
+    .exam-row small{
+      display:block;
       font-size:8px;
-      color:#8b99ae;
+      color:#8996aa;
+    }
+    .exam-row .exam-chip{
+      background:#eaf1ff;
+      color:#295ab8;
+      border-radius:5px;
+      padding:4px 7px;
+      font-size:8px;
+      font-weight:800;
+    }
+    .exam-footnote{
+      margin-top:12px;
+      font-size:8px;
+      color:#8794a7;
       text-align:right;
     }
 
-    /* OPERATING SYSTEM */
-    .operating-grid{
+    /* CONNECTION EXPLAINER */
+    .connection{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:13px;
-    }
-
-    .operating-card{
-      border:1px solid var(--line);
-      border-radius:15px;
-      background:#fff;
-      padding:20px;
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
-
-    .operating-card.dark{
-      background:linear-gradient(135deg,#142642,#214a87);
-      border-color:#1c3b6d;
-      color:#fff;
-    }
-
-    .operating-heading{
-      display:flex;
+      grid-template-columns:.95fr 1.05fr;
+      gap:27px;
       align-items:center;
-      gap:11px;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:23px;
+      background:#fff;
     }
 
-    .operating-heading svg{
-      width:22px;
-      height:22px;
-      color:var(--blue);
+    .connection h2{
+      color:var(--navy);
+      font-size:clamp(22px,2.5vw,29px);
+      margin:8px 0 10px;
     }
-    .operating-card.dark .operating-heading svg{color:#b5d1ff}
-    .operating-heading h3{font-size:17px;margin:0}
-    .operating-heading small{display:block;font-size:9px;color:var(--muted)}
-    .operating-card.dark .operating-heading small{color:#bdd2ee}
-
-    .operating-card p{
-      font-size:11.5px;
-      line-height:1.8;
+    .connection p{
       color:var(--muted);
+      font-size:11.5px;
       margin:0;
+      line-height:1.85;
     }
-    .operating-card.dark p{color:#d0dff3}
 
-    .pillrow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:6px;
-      margin-top:auto;
+    .connection-diagram{
+      border-radius:12px;
+      background:#f4f8ff;
+      border:1px solid #e2eaf8;
+      padding:16px;
     }
-    .pillrow span{
-      border:1px solid #e4eaf4;
-      background:#f7f9fd;
-      color:#5e708b;
-      padding:5px 8px;
-      border-radius:6px;
-      font-size:9px;
-      font-weight:700;
-    }
-    .operating-card.dark .pillrow span{
-      border-color:rgba(255,255,255,.17);
-      background:rgba(255,255,255,.09);
-      color:#e8efff;
+    .connection-diagram svg{
+      width:100%;
+      height:auto;
+      max-height:170px;
     }
 
     /* CAPABILITIES */
@@ -788,138 +758,174 @@
 
     .cap{
       display:flex;
-      gap:10px;
       align-items:flex-start;
-      border:1px solid var(--line);
+      gap:10px;
       background:#fff;
+      border:1px solid var(--line);
       border-radius:11px;
       padding:14px;
     }
-    .cap svg{
-      width:20px;
-      height:20px;
+    .cap .ico{
+      width:19px;
+      height:19px;
       color:var(--blue2);
     }
     .cap strong{
       display:block;
       font-size:11px;
       margin-bottom:3px;
+      color:var(--navy);
     }
     .cap p{
+      margin:0;
       color:var(--muted);
       font-size:10px;
       line-height:1.65;
-      margin:0;
     }
 
     /* ROADMAP */
     .roadmap{
       display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
+      grid-template-columns:repeat(3,minmax(0,1fr));
       gap:10px;
     }
     .road{
-      background:#fff;
       border:1px solid var(--line);
       border-radius:11px;
-      padding:14px;
+      background:#fff;
+      padding:15px;
     }
-    .road .step{
-      display:inline-block;
-      color:var(--blue);
-      font-size:9px;
+    .road.current{
+      background:#f9fbff;
+      border-color:#b8caf1;
+    }
+    .road-label{
+      color:var(--blue2);
       font-weight:800;
-      margin-bottom:8px;
-      letter-spacing:.07em;
+      font-size:9px;
+      letter-spacing:.1em;
     }
-    .road h3{font-size:12px;margin:0 0 5px}
-    .road p{font-size:10px;color:var(--muted);margin:0;line-height:1.65}
-    .road.current{border-color:#b8caf1;background:#f9fbff}
+    .road h3{
+      color:var(--navy);
+      font-size:13px;
+      margin:8px 0 6px;
+    }
+    .road p{
+      color:var(--muted);
+      font-size:10px;
+      line-height:1.7;
+      margin:0;
+    }
+    .road-note{
+      margin:10px 0 0;
+      font-size:10px;
+      color:#7c8aa0;
+    }
 
-    /* PARTNERSHIP */
-    .contact-panel{
+    /* CONTACT */
+    .contact{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:24px;
-      background:linear-gradient(110deg,#122442,#1d4380);
-      border-radius:16px;
-      color:#fff;
+      gap:25px;
       padding:25px 28px;
-      overflow:hidden;
+      color:#fff;
+      border-radius:16px;
+      background:linear-gradient(110deg,#122442,#1d4380);
     }
 
-    .contact-panel .kicker{color:#a9c8ff}
-    .contact-panel .kicker::before{background:#89b3ff}
-    .contact-panel h2{
-      font-size:clamp(21px,2.5vw,29px);
-      margin:9px 0;
-      color:#fff;
+    .contact .eyebrow{color:#b0ccff}
+    .contact .eyebrow::before{
+      background:#8eb6ff;
+      box-shadow:0 0 0 4px rgba(255,255,255,.09);
     }
-    .contact-panel p{
-      color:#d0def2;
+    .contact h2{
+      font-size:clamp(22px,2.5vw,29px);
+      color:#fff;
+      margin:9px 0;
+    }
+    .contact p{
+      color:#d4e0f2;
+      max-width:720px;
       font-size:11.5px;
       line-height:1.8;
       margin:0;
-      max-width:700px;
     }
-    .contact-links{
+    .contact-mail{
+      display:inline-block;
       margin-top:11px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px 15px;
-    }
-    .contact-links a{
+      font-size:11px;
+      font-weight:700;
       color:#fff;
       text-decoration:underline;
       text-underline-offset:3px;
-      font-size:11px;
-      font-weight:700;
       overflow-wrap:anywhere;
     }
-    .contact-panel .btn{flex-shrink:0}
+    .contact .btn{flex-shrink:0}
 
     /* ABOUT */
     .about-grid{
       display:grid;
       grid-template-columns:1.1fr .9fr;
-      gap:22px;
       align-items:center;
+      gap:22px;
     }
 
     .about-grid h2{
-      font-size:clamp(23px,2.8vw,32px);
-      margin:8px 0 11px;
+      font-size:clamp(23px,2.7vw,32px);
+      color:var(--navy);
+      margin:8px 0 10px;
     }
+
     .about-grid p{
       color:var(--muted);
       font-size:12px;
       line-height:1.85;
-      margin:0 0 10px;
-    }
-    .about-quote{
-      border:1px solid var(--line);
-      background:linear-gradient(135deg,#f9fbff,#f0f5ff);
-      border-radius:14px;
-      padding:24px;
-    }
-    .about-quote h3{
-      color:var(--navy);
-      font-size:clamp(24px,3vw,37px);
-      margin:0 0 12px;
-    }
-    .about-quote p{
-      color:#506786;
-      font-size:11px;
       margin:0;
     }
+
+    .about-quote{
+      position:relative;
+      overflow:hidden;
+      border:1px solid #dfe7f5;
+      background:linear-gradient(135deg,#f9fbff,#edf4ff);
+      border-radius:15px;
+      padding:24px;
+    }
+
+    .about-quote::after{
+      content:"";
+      position:absolute;
+      width:180px;
+      height:180px;
+      right:-85px;
+      top:-90px;
+      border:1px solid #d5e3fa;
+      border-radius:50%;
+      box-shadow:0 0 0 30px rgba(204,221,250,.17);
+      pointer-events:none;
+    }
+
     .about-quote small{
       display:block;
-      color:var(--blue2);
       font-size:9px;
+      color:var(--blue2);
       font-weight:800;
-      letter-spacing:.15em;
+      letter-spacing:.14em;
       margin-bottom:10px;
+    }
+
+    .about-quote h3{
+      font-size:clamp(24px,3vw,37px);
+      color:var(--navy);
+      margin:0 0 12px;
+    }
+
+    .about-quote p{
+      color:#526b8b;
+      font-size:11px;
+      line-height:1.8;
+      max-width:450px;
     }
 
     /* FOOTER */
@@ -931,92 +937,101 @@
 
     .footer-grid{
       display:grid;
-      grid-template-columns:1.25fr .8fr .8fr 1fr;
-      gap:25px;
+      grid-template-columns:1.3fr .85fr .85fr 1fr;
+      gap:24px;
     }
 
     .footer-brand{
       display:flex;
       align-items:center;
       gap:9px;
-      margin-bottom:12px;
+      margin-bottom:10px;
     }
     .footer-brand img{
-      width:32px;
-      height:32px;
-      object-fit:cover;
+      width:33px;
+      height:33px;
       border-radius:9px;
+      object-fit:cover;
     }
-    .footer-brand b{
+    .footer-brand strong{
       font-size:13px;
       letter-spacing:.04em;
     }
 
-    .footer p{
+    .footer-branding p{
       font-size:10.5px;
       line-height:1.85;
-      color:#acbed8;
+      color:#b1c2dc;
       margin:0;
-      max-width:300px;
+      max-width:310px;
+    }
+    .footer-branding .tagline{
+      color:#fff;
+      font-size:10.5px;
+      font-weight:800;
+      margin-top:10px;
     }
 
     .footer h4{
-      color:#8fb4f8;
       font-size:9px;
       font-weight:800;
-      letter-spacing:.14em;
-      margin:2px 0 12px;
+      letter-spacing:.13em;
+      color:#99bafa;
+      margin:3px 0 12px;
     }
 
     .footer-links{
       display:grid;
-      align-content:start;
       gap:9px;
+      align-content:start;
     }
-    .footer-links a,.footer-links span{
+    .footer-links a,
+    .footer-links span{
       font-size:10.5px;
-      color:#d9e5f6;
       line-height:1.5;
+      color:#dbe5f5;
     }
-    .footer-links a:hover{color:#fff;text-decoration:underline}
+    .footer-links a:hover{text-decoration:underline;color:#fff}
 
     .footer-bottom{
-      border-top:1px solid rgba(255,255,255,.13);
+      border-top:1px solid rgba(255,255,255,.14);
       margin-top:23px;
       padding-top:14px;
       display:flex;
       justify-content:space-between;
-      align-items:center;
-      gap:10px 20px;
       flex-wrap:wrap;
-      color:#9aacc9;
+      gap:8px 16px;
+      color:#9bafca;
       font-size:9.5px;
     }
     .footer-bottom strong{color:#e5efff}
 
-    /* RESPONSIVE */
+    /* TABLET */
     @media(max-width:1000px){
-      .navlinks{gap:11px}
-      .hero-grid{gap:22px}
+      .navlinks{gap:12px}
+      .hero-grid{gap:20px}
       .eco-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
 
+    /* MOBILE */
     @media(max-width:760px){
-      .container{width:min(100% - 26px,1160px)}
+      .container{width:calc(100% - 26px)}
+
       .nav{
+        min-height:59px;
         flex-wrap:wrap;
-        gap:8px;
+        gap:7px;
         padding:9px 0;
-        min-height:60px;
       }
+
       .navlinks{
         order:3;
         width:100%;
-        justify-content:flex-start;
         overflow-x:auto;
+        justify-content:flex-start;
         gap:18px;
-        padding:5px 0 2px;
+        padding:6px 0 2px;
         scrollbar-width:none;
       }
       .navlinks::-webkit-scrollbar{display:none}
@@ -1024,69 +1039,110 @@
 
       .hero-grid{
         grid-template-columns:1fr;
-        padding:32px 0 29px;
-        gap:22px;
+        padding:32px 0 30px;
+        gap:24px;
       }
-      .hero h1{font-size:clamp(34px,8vw,48px)}
-      .hero-visual{min-height:auto}
-      .quick-inner{grid-template-columns:repeat(2,1fr)}
-      .quick-item:nth-child(2){border-right:0}
-      .quick-item:nth-child(-n+2){border-bottom:1px solid var(--line)}
-      .quick-item{padding:9px}
+      .hero h1{font-size:clamp(35px,8vw,48px)}
+      .hero-desc{font-size:12px}
 
+      .network{height:350px}
       .section{padding:33px 0}
+      .section-head h2{font-size:24px}
       .featured{grid-template-columns:1fr}
       .featured-content{padding:21px}
-      .featured-art{padding:17px}
-      .operating-grid{grid-template-columns:1fr}
-      .cap-grid{grid-template-columns:repeat(2,1fr)}
-      .roadmap{grid-template-columns:repeat(2,1fr)}
-      .contact-panel{flex-direction:column;align-items:stretch;padding:21px}
-      .contact-panel .btn{align-self:flex-start}
+      .featured-art{padding:18px}
+
+      .connection{grid-template-columns:1fr;gap:15px;padding:19px}
+      .cap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .roadmap{grid-template-columns:1fr 1fr}
+      .road:last-child{grid-column:1/-1}
+
+      .contact{
+        align-items:stretch;
+        flex-direction:column;
+        padding:21px;
+        gap:17px;
+      }
+      .contact .btn{align-self:flex-start}
       .about-grid{grid-template-columns:1fr;gap:13px}
     }
 
     @media(max-width:480px){
-      body{font-size:12px}
       .container{width:calc(100% - 22px)}
+      .brand{gap:7px}
       .brand img{width:33px;height:33px}
-      .brand-copy b{font-size:12px}
+      .brand-copy strong{font-size:12px}
       .brand-copy small{font-size:7px}
-      .header-action{font-size:10px;padding:8px 10px}
-      .hero h1{font-size:35px}
-      .hero-desc{font-size:12px}
-      .hero-actions .btn{flex:1}
-      .hero-note{font-size:9px}
-      .hero-visual{padding:13px;border-radius:14px}
-      .mini-card{padding:9px 7px;min-height:73px}
-      .mini-card strong{font-size:9px}
-      .mini-card small{font-size:7px}
-      .mini-card svg{width:17px;height:17px}
+      .header-cta{font-size:10px;padding:8px 10px}
 
-      .section-head{margin-bottom:15px}
-      .section-head h2{font-size:23px}
+      .hero h1{font-size:35px}
+      .hero-actions .btn{flex:1}
+      .hero-caption{font-size:9px}
+
+      .network{
+        height:300px;
+        border-radius:15px;
+      }
+      .network-label,.network-tag{font-size:8px}
+      .network-core{
+        width:93px;
+        height:93px;
+        border-radius:21px;
+        gap:6px;
+      }
+      .network-core img{
+        width:38px;
+        height:38px;
+        border-radius:10px;
+      }
+      .network-core strong{font-size:8px}
+
+      .network-node{
+        width:96px;
+        min-height:54px;
+        padding:7px 6px;
+        gap:5px;
+      }
+      .network-node .node-icon{
+        width:23px;
+        height:23px;
+        border-radius:6px;
+      }
+      .network-node .ico{width:13px;height:13px}
+      .network-node strong{font-size:8px}
+      .network-node small{font-size:6px}
+      .node-education{left:20%;top:22%}
+      .node-professional{left:80%;top:22%}
+      .node-finance{left:17%;top:73%}
+      .node-business{left:83%;top:73%}
+      .node-homestead{left:50%;top:90%}
+      .network-note{font-size:7px}
+
       .eco-grid{gap:9px}
-      .eco-card{padding:13px;border-radius:11px}
-      .eco-head{margin-bottom:9px}
-      .eco-icon{width:32px;height:32px;border-radius:8px}
-      .eco-icon svg{width:18px;height:18px}
-      .eco-card h3{font-size:12.5px}
+      .eco-card{padding:14px;border-radius:12px}
+      .eco-card h3{font-size:13px}
       .eco-card p{font-size:10px}
-      .eco-tags{gap:4px}
-      .eco-tags span{font-size:8px;padding:3px 5px}
-      .eco-footer{font-size:9px}
+      .eco-top{margin-bottom:9px}
+      .eco-icon{width:32px;height:32px}
+      .eco-icon .ico{width:18px;height:18px}
+      .eco-foot{font-size:9px}
       .badge{font-size:8px;padding:3px 6px}
 
       .featured-content{padding:17px}
-      .featured h3{font-size:24px}
-      .cap-grid{gap:7px}
+      .featured-content h3{font-size:24px}
+      .cap-grid{gap:8px}
       .cap{padding:11px;gap:8px}
       .cap strong{font-size:10px}
       .cap p{font-size:9px}
-      .road{padding:11px}
-      .footer-grid{gap:22px 15px}
+      .road{padding:12px}
+      .footer-grid{gap:23px 15px}
       .footer{padding-top:25px}
-      .footer-bottom{font-size:9px}
+    }
+
+    @media(max-width:360px){
+      .eco-grid{grid-template-columns:1fr}
+      .network-node{width:89px}
+      .footer-grid{grid-template-columns:1fr 1fr}
     }
 
     @media(prefers-reduced-motion:reduce){
@@ -1099,14 +1155,14 @@
 
 <body>
 
-  <!-- SVG ICON LIBRARY -->
+  <!-- SHARED SVG ICONS -->
   <svg xmlns="http://www.w3.org/2000/svg"
        aria-hidden="true"
        style="position:absolute;width:0;height:0;overflow:hidden">
 
     <symbol id="i-school" viewBox="0 0 24 24">
       <path d="m3 10 9-6 9 6v10H3V10Z"/>
-      <path d="M9 20v-7h6v7M3 10h18M7 7h.01M17 7h.01"/>
+      <path d="M9 20v-7h6v7M3 10h18"/>
     </symbol>
 
     <symbol id="i-award" viewBox="0 0 24 24">
@@ -1116,8 +1172,7 @@
 
     <symbol id="i-wallet" viewBox="0 0 24 24">
       <rect x="3" y="6" width="18" height="15" rx="2"/>
-      <path d="M3 10h18M5 6V4h14v2"/>
-      <path d="M16 15h2"/>
+      <path d="M3 10h18M5 6V4h14v2M16 15h2"/>
     </symbol>
 
     <symbol id="i-business" viewBox="0 0 24 24">
@@ -1131,48 +1186,19 @@
       <path d="M12 12c0-6 3-9 9-9 0 6-3 9-9 9Z"/>
     </symbol>
 
-    <symbol id="i-calendar" viewBox="0 0 24 24">
-      <rect x="3" y="5" width="18" height="16" rx="2"/>
-      <path d="M7 3v4M17 3v4M3 10h18"/>
-      <path d="m8 15 2 2 5-5"/>
-    </symbol>
-
-    <symbol id="i-bot" viewBox="0 0 24 24">
-      <rect x="4" y="8" width="16" height="12" rx="3"/>
-      <path d="M12 8V4M9 4h6M1 12v4M23 12v4"/>
-      <path d="M9 13h.01M15 13h.01M9 17h6"/>
-    </symbol>
-
-    <symbol id="i-brain" viewBox="0 0 24 24">
-      <path d="M12 5a4 4 0 0 0-7 2 4 4 0 0 0-2 6 4 4 0 0 0 4 6 3 3 0 0 0 5 0V5Z"/>
-      <path d="M12 5a4 4 0 0 1 7 2 4 4 0 0 1 2 6 4 4 0 0 1-4 6 3 3 0 0 1-5 0V5Z"/>
-      <path d="M8 10l-2 2M16 10l2 2M8 16l2-1M16 16l-2-1"/>
-    </symbol>
-
     <symbol id="i-check" viewBox="0 0 24 24">
       <circle cx="12" cy="12" r="9"/>
       <path d="m8 12 3 3 5-6"/>
     </symbol>
 
-    <symbol id="i-chart" viewBox="0 0 24 24">
-      <path d="M3 3v18h18"/>
-      <path d="m6 16 5-5 4 3 5-7"/>
+    <symbol id="i-brain" viewBox="0 0 24 24">
+      <path d="M12 5a4 4 0 0 0-7 2 4 4 0 0 0-2 6 4 4 0 0 0 4 6 3 3 0 0 0 5 0V5Z"/>
+      <path d="M12 5a4 4 0 0 1 7 2 4 4 0 0 1 2 6 4 4 0 0 1-4 6 3 3 0 0 1-5 0V5Z"/>
     </symbol>
 
-    <symbol id="i-target" viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="9"/>
-      <circle cx="12" cy="12" r="5"/>
-      <circle cx="12" cy="12" r="1"/>
-    </symbol>
-
-    <symbol id="i-layers" viewBox="0 0 24 24">
-      <path d="m12 3 9 5-9 5-9-5 9-5Z"/>
-      <path d="m3 12 9 5 9-5M3 16l9 5 9-5"/>
-    </symbol>
-
-    <symbol id="i-shield" viewBox="0 0 24 24">
-      <path d="m12 2 9 4v6c0 6-4 9-9 10-5-1-9-4-9-10V6l9-4Z"/>
-      <path d="m8 12 3 3 5-6"/>
+    <symbol id="i-handshake" viewBox="0 0 24 24">
+      <path d="m2 8 5-4 5 2 5-2 5 4-4 8-5 4-4-3-4-2-3-7Z"/>
+      <path d="m8 12 4-4 3 2M9 17l3-3 4 3"/>
     </symbol>
 
     <symbol id="i-book" viewBox="0 0 24 24">
@@ -1184,20 +1210,15 @@
       <path d="m8 7-5 5 5 5m8-10 5 5-5 5M14 4l-4 16"/>
     </symbol>
 
-    <symbol id="i-handshake" viewBox="0 0 24 24">
-      <path d="m2 8 5-4 5 2 5-2 5 4-4 8-5 4-4-3-4-2-3-7Z"/>
-      <path d="m8 12 4-4 3 2M9 17l3-3 4 3"/>
+    <symbol id="i-layers" viewBox="0 0 24 24">
+      <path d="m12 3 9 5-9 5-9-5 9-5Z"/>
+      <path d="m3 12 9 5 9-5M3 16l9 5 9-5"/>
     </symbol>
 
     <symbol id="i-film" viewBox="0 0 24 24">
       <rect x="3" y="5" width="18" height="16" rx="2"/>
       <path d="m3 10 18-5M8 5l4 4M16 5l4 4"/>
       <path d="m10 13 5 3-5 3v-6Z"/>
-    </symbol>
-
-    <symbol id="i-heart" viewBox="0 0 24 24">
-      <path d="M20 5a5 5 0 0 0-8 0 5 5 0 0 0-8 0c-3 4 0 8 8 15 8-7 11-11 8-15Z"/>
-      <path d="M5 12h4l2-3 3 6 2-3h3"/>
     </symbol>
 
     <symbol id="i-globe" viewBox="0 0 24 24">
@@ -1214,23 +1235,26 @@
     <div class="container nav">
 
       <a class="brand" href="/" aria-label="Athena Hub Beranda">
-        <img src="/athenahub-logo.png" width="37" height="37" alt="Logo Athena Hub">
+        <img src="/athenahub-logo.png"
+             width="37" height="37"
+             alt="Logo Athena Hub">
         <span class="brand-copy">
-          <b>ATHENA HUB</b>
+          <strong>ATHENA HUB</strong>
           <small>One Ecosystem. Endless Possibilities.</small>
         </span>
       </a>
 
       <nav class="navlinks" aria-label="Navigasi utama">
-        <a href="#about">About Us</a>
         <a href="#platform">Ecosystem</a>
-        <a href="#products">Our Products</a>
+        <a href="#products">Products</a>
+        <a href="#solutions">Solutions</a>
         <a href="#upcoming">Roadmap</a>
-        <a href="#business">Partnerships</a>
+        <a href="#about">About</a>
+        <a href="#business">Contact</a>
       </nav>
 
-      <a class="header-action" href="https://aps.athenahub.id/">
-        Buka APS <span aria-hidden="true">↗</span>
+      <a class="header-cta" href="https://aps.athenahub.id/">
+        Buka APS ↗
       </a>
 
     </div>
@@ -1239,143 +1263,177 @@
   <main id="main">
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
 
         <div>
-          <div class="kicker">Welcome to Athena Hub</div>
+          <div class="eyebrow">Welcome to Athena Hub</div>
 
-          <h1>
+          <h1 id="hero-title">
             One Ecosystem.<br>
-            <span>Limitless Growth.</span>
+            <span>Endless Possibilities.</span>
           </h1>
 
           <p class="hero-desc">
-            Ekosistem digital yang menghubungkan pendidikan,
-            pengembangan profesional, keuangan, bisnis,
-            kehidupan berkelanjutan, dan produktivitas.
-            Dibangun untuk membantu setiap langkah pertumbuhan
-            melalui pengetahuan, teknologi, dan inovasi.
+            Menghubungkan pendidikan, pengembangan profesional,
+            keuangan, bisnis, dan kehidupan berkelanjutan
+            melalui solusi digital yang dirancang
+            untuk membantu manusia berkembang.
           </p>
 
           <div class="hero-actions">
             <a class="btn primary" href="#platform">
-              Explore Our Ecosystem <span class="arrow">↗</span>
+              Explore Ecosystem ↗
             </a>
             <a class="btn outline" href="https://aps.athenahub.id/">
-              Explore APS <span class="arrow">↗</span>
+              Explore APS ↗
             </a>
           </div>
 
-          <div class="hero-note">
-            <span>
-              <svg class="icon"><use href="#i-check"/></svg>
-              Built for continuous growth
-            </span>
-            <span>
-              <svg class="icon"><use href="#i-check"/></svg>
-              Powered by technology
-            </span>
+          <div class="hero-caption">
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-check"/>
+            </svg>
+            Building connected solutions for a better future.
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Visual ekosistem Athena">
+        <!-- CENTRAL ECOSYSTEM NETWORK -->
+        <div class="network"
+             role="img"
+             aria-label="Diagram Athena Hub sebagai pusat jejaring yang menghubungkan Education, Professional, Finance, Business, dan Homestead">
 
-          <div class="visual-top">
-            <span class="visual-label">ATHENA ECOSYSTEM</span>
-            <span class="visual-mark"><i></i> Connected Vision</span>
+          <div class="network-label">ECOSYSTEM NETWORK</div>
+          <div class="network-tag">Connected Vision</div>
+
+          <svg class="network-wires"
+               viewBox="0 0 600 360"
+               preserveAspectRatio="none"
+               aria-hidden="true">
+
+            <!-- ORBITS -->
+            <ellipse class="orbit"
+                     cx="300" cy="176"
+                     rx="165" ry="133"/>
+            <ellipse class="orbit"
+                     cx="300" cy="176"
+                     rx="248" ry="165"/>
+
+            <!-- CENTRAL LINKS -->
+            <path class="wire" d="M300 176 L126 76"/>
+            <path class="wire" d="M300 176 L474 76"/>
+            <path class="wire" d="M300 176 L102 259"/>
+            <path class="wire" d="M300 176 L498 259"/>
+            <path class="wire" d="M300 176 L300 320"/>
+
+            <!-- CROSS CONNECTIONS -->
+            <path class="wire-soft" d="M126 76 Q300 6 474 76"/>
+            <path class="wire-soft" d="M102 259 Q300 345 498 259"/>
+            <path class="wire-soft" d="M126 76 Q42 170 102 259"/>
+            <path class="wire-soft" d="M474 76 Q558 170 498 259"/>
+
+            <!-- CONNECTION POINTS -->
+            <circle class="dot" cx="197" cy="117" r="4"/>
+            <circle class="dot" cx="403" cy="117" r="4"/>
+            <circle class="dot" cx="183" cy="225" r="4"/>
+            <circle class="dot" cx="417" cy="225" r="4"/>
+            <circle class="dot" cx="300" cy="272" r="4"/>
+
+          </svg>
+
+          <!-- CENTRAL NODE -->
+          <div class="network-core">
+            <img src="/athenahub-logo.png"
+                 alt=""
+                 width="51" height="51">
+            <strong>ATHENA HUB</strong>
           </div>
 
-          <div class="visual-center">
-
-            <div class="mini-card">
-              <svg class="icon"><use href="#i-school"/></svg>
-              <div>
-                <strong>Education</strong>
-                <small>Learn & achieve</small>
-              </div>
-            </div>
-
-            <div class="mini-card special">
-              <svg class="icon"><use href="#i-award"/></svg>
-              <div>
-                <strong>Professional</strong>
-                <small>Skills & career</small>
-              </div>
-            </div>
-
-            <div class="mini-card">
-              <svg class="icon"><use href="#i-wallet"/></svg>
-              <div>
-                <strong>Finance</strong>
-                <small>Money & assets</small>
-              </div>
-            </div>
-
-            <div class="mini-card">
-              <svg class="icon"><use href="#i-business"/></svg>
-              <div>
-                <strong>Business</strong>
-                <small>Manage & scale</small>
-              </div>
-            </div>
-
-            <div class="mini-card">
-              <svg class="icon"><use href="#i-sprout"/></svg>
-              <div>
-                <strong>Homestead</strong>
-                <small>Grow sustainably</small>
-              </div>
-            </div>
-
-            <div class="mini-card">
-              <svg class="icon"><use href="#i-calendar"/></svg>
-              <div>
-                <strong>Planner</strong>
-                <small>Plan & progress</small>
-              </div>
-            </div>
-
+          <!-- EDUCATION -->
+          <div class="network-node node-education"
+               style="--node-bg:#e9f1ff;--node-color:#3268cb">
+            <span class="node-icon">
+              <svg class="ico"><use href="#i-school"/></svg>
+            </span>
+            <span>
+              <strong>Education</strong>
+              <small>Learn & achieve</small>
+            </span>
           </div>
+
+          <!-- PROFESSIONAL -->
+          <div class="network-node node-professional"
+               style="--node-bg:#e9efff;--node-color:#2457e8">
+            <span class="node-icon">
+              <svg class="ico"><use href="#i-award"/></svg>
+            </span>
+            <span>
+              <strong>Professional</strong>
+              <small>Skills & career</small>
+            </span>
+          </div>
+
+          <!-- FINANCE -->
+          <div class="network-node node-finance"
+               style="--node-bg:#e5f4ee;--node-color:#14816a">
+            <span class="node-icon">
+              <svg class="ico"><use href="#i-wallet"/></svg>
+            </span>
+            <span>
+              <strong>Finance</strong>
+              <small>Money & assets</small>
+            </span>
+          </div>
+
+          <!-- BUSINESS -->
+          <div class="network-node node-business"
+               style="--node-bg:#fff1e3;--node-color:#956127">
+            <span class="node-icon">
+              <svg class="ico"><use href="#i-business"/></svg>
+            </span>
+            <span>
+              <strong>Business</strong>
+              <small>Manage & scale</small>
+            </span>
+          </div>
+
+          <!-- HOMESTEAD -->
+          <div class="network-node node-homestead"
+               style="--node-bg:#ebf6e8;--node-color:#468348">
+            <span class="node-icon">
+              <svg class="ico"><use href="#i-sprout"/></svg>
+            </span>
+            <span>
+              <strong>Homestead</strong>
+              <small>Grow sustainably</small>
+            </span>
+          </div>
+
+          <span class="network-note">
+            One hub · Five interconnected domains
+          </span>
 
         </div>
 
       </div>
     </section>
 
-    <!-- QUICK VALUE STRIP -->
-    <div class="quick-strip">
-      <div class="container quick-inner">
-        <div class="quick-item">
-          <b>Learn</b>
-          <small>Knowledge & competence</small>
-        </div>
-        <div class="quick-item">
-          <b>Manage</b>
-          <small>Finance & business</small>
-        </div>
-        <div class="quick-item">
-          <b>Grow</b>
-          <small>Goals & sustainability</small>
-        </div>
-        <div class="quick-item">
-          <b>Innovate</b>
-          <small>Technology & intelligence</small>
-        </div>
-      </div>
-    </div>
-
     <!-- ECOSYSTEM -->
-    <section class="section soft" id="platform">
+    <section class="section soft"
+             id="platform"
+             aria-labelledby="ecosystem-heading">
+
       <div class="container">
 
         <div class="section-head">
           <div>
-            <div class="kicker">The Athena Ecosystem</div>
-            <h2>One Hub. Multiple Dimensions of Growth.</h2>
+            <div class="eyebrow">Our Ecosystem</div>
+            <h2 id="ecosystem-heading">
+              Five Domains. One Connected Vision.
+            </h2>
             <p>
-              Tujuh pilar dengan tujuan berbeda, dirancang
-              untuk berkembang sebagai satu ekosistem terhubung.
+              Solusi yang berfokus pada kebutuhan berbeda,
+              dengan peluang integrasi dalam satu ekosistem.
             </p>
           </div>
         </div>
@@ -1383,51 +1441,54 @@
         <div class="eco-grid">
 
           <!-- EDUCATION -->
-          <article class="eco-card" style="--accent:#3268cb;--tint:#eaf2ff">
-            <div class="eco-head">
-              <div class="eco-icon">
-                <svg class="icon"><use href="#i-school"/></svg>
-              </div>
-              <span class="badge plan">Roadmap</span>
+          <article class="eco-card"
+                   style="--accent:#3268cb;--tint:#eaf2ff">
+
+            <div class="eco-top">
+              <span class="eco-icon">
+                <svg class="ico" aria-hidden="true">
+                  <use href="#i-school"/>
+                </svg>
+              </span>
+              <span class="badge">Roadmap</span>
             </div>
+
             <h3>Athena Education</h3>
+
             <p>
-              Ekosistem pembelajaran akademik,
-              latihan soal sekolah, asesmen kemampuan,
-              dan persiapan seleksi perguruan tinggi.
+              Pembelajaran akademik, latihan soal sekolah,
+              asesmen kemampuan, dan tryout persiapan
+              seleksi masuk perguruan tinggi.
             </p>
-            <div class="eco-tags">
-              <span>School Practice</span>
-              <span>UTBK-SNBT</span>
-              <span>Tryout</span>
-            </div>
-            <div class="eco-footer">
-              <span>Academic Learning</span>
-              <span>Planned</span>
+
+            <div class="eco-foot">
+              <span>School · UTBK-SNBT · Tryout</span>
             </div>
           </article>
 
           <!-- PROFESSIONAL -->
-          <article class="eco-card" style="--accent:#2457e8;--tint:#eaf0ff">
-            <div class="eco-head">
-              <div class="eco-icon">
-                <svg class="icon"><use href="#i-award"/></svg>
-              </div>
-              <span class="badge active">APS Available</span>
+          <article class="eco-card"
+                   style="--accent:#2457e8;--tint:#eaf0ff">
+
+            <div class="eco-top">
+              <span class="eco-icon">
+                <svg class="ico" aria-hidden="true">
+                  <use href="#i-award"/>
+                </svg>
+              </span>
+              <span class="badge live">APS Available</span>
             </div>
+
             <h3>Athena Professional</h3>
+
             <p>
-              Pengembangan kompetensi, sertifikasi,
-              karier, dan pembelajaran profesional
-              melalui solusi digital berbasis praktik.
+              Pengembangan kompetensi, persiapan sertifikasi,
+              asesmen profesional, dan pertumbuhan karier.
+              Dimulai melalui Athena Practice System.
             </p>
-            <div class="eco-tags">
-              <span>Certification</span>
-              <span>Career</span>
-              <span>Assessment</span>
-            </div>
-            <div class="eco-footer">
-              <span>Professional Growth</span>
+
+            <div class="eco-foot">
+              <span>Certification · Career</span>
               <a href="https://aps.athenahub.id/">
                 Explore APS ↗
               </a>
@@ -1435,236 +1496,341 @@
           </article>
 
           <!-- FINANCE -->
-          <article class="eco-card" style="--accent:#14816a;--tint:#e4f5ef">
-            <div class="eco-head">
-              <div class="eco-icon">
-                <svg class="icon"><use href="#i-wallet"/></svg>
-              </div>
-              <span class="badge progress">In Development</span>
+          <article class="eco-card"
+                   style="--accent:#14816a;--tint:#e4f5ef">
+
+            <div class="eco-top">
+              <span class="eco-icon">
+                <svg class="ico" aria-hidden="true">
+                  <use href="#i-wallet"/>
+                </svg>
+              </span>
+              <span class="badge build">In Development</span>
             </div>
+
             <h3>Athena Finance</h3>
+
             <p>
-              Pengelolaan keuangan pribadi, anggaran,
-              aset, kendaraan, kewajiban, dan
-              perencanaan finansial dalam satu sistem.
+              Keuangan pribadi dan keluarga, anggaran,
+              arus kas, aset, kendaraan, pemeliharaan,
+              kewajiban, dan perencanaan finansial.
             </p>
-            <div class="eco-tags">
-              <span>Personal Finance</span>
-              <span>Assets</span>
-              <span>Maintenance</span>
-            </div>
-            <div class="eco-footer">
-              <span>Financial Wellbeing</span>
-              <span>Upcoming</span>
+
+            <div class="eco-foot">
+              <span>Personal Finance · Assets</span>
             </div>
           </article>
 
           <!-- BUSINESS -->
-          <article class="eco-card" style="--accent:#956127;--tint:#fff3e6">
-            <div class="eco-head">
-              <div class="eco-icon">
-                <svg class="icon"><use href="#i-business"/></svg>
-              </div>
-              <span class="badge plan">Roadmap</span>
+          <article class="eco-card"
+                   style="--accent:#956127;--tint:#fff3e6">
+
+            <div class="eco-top">
+              <span class="eco-icon">
+                <svg class="ico" aria-hidden="true">
+                  <use href="#i-business"/>
+                </svg>
+              </span>
+              <span class="badge">Roadmap</span>
             </div>
+
             <h3>Athena Business</h3>
+
             <p>
-              Solusi pengelolaan bisnis, keuangan usaha,
-              penjualan, pelanggan, persediaan,
-              operasional, dan performa perusahaan.
+              Pengelolaan keuangan usaha, penjualan,
+              pelanggan, pembelian, persediaan,
+              aktivitas operasional, dan kinerja bisnis.
             </p>
-            <div class="eco-tags">
-              <span>Business Finance</span>
-              <span>Operations</span>
-              <span>Analytics</span>
-            </div>
-            <div class="eco-footer">
-              <span>Business Management</span>
-              <span>Planned</span>
+
+            <div class="eco-foot">
+              <span>Business Finance · Operations</span>
             </div>
           </article>
 
           <!-- HOMESTEAD -->
-          <article class="eco-card" style="--accent:#468348;--tint:#eaf6e7">
-            <div class="eco-head">
-              <div class="eco-icon">
-                <svg class="icon"><use href="#i-sprout"/></svg>
-              </div>
-              <span class="badge plan">Roadmap</span>
+          <article class="eco-card"
+                   style="--accent:#468348;--tint:#eaf6e7">
+
+            <div class="eco-top">
+              <span class="eco-icon">
+                <svg class="ico" aria-hidden="true">
+                  <use href="#i-sprout"/>
+                </svg>
+              </span>
+              <span class="badge">Roadmap</span>
             </div>
+
             <h3>Athena Homestead</h3>
+
             <p>
-              Pengetahuan pertanian, kebun rumah,
-              pengelolaan sumber daya, produksi pangan,
-              dan praktik hidup lebih berkelanjutan.
+              Pengetahuan budidaya, kebun rumah,
+              pertanian skala kecil, produksi pangan,
+              pengelolaan sumber daya, dan kemandirian hidup.
             </p>
-            <div class="eco-tags">
-              <span>Urban Farming</span>
-              <span>Gardening</span>
-              <span>Sustainability</span>
-            </div>
-            <div class="eco-footer">
-              <span>Sustainable Living</span>
-              <span>Planned</span>
+
+            <div class="eco-foot">
+              <span>Farming · Sustainability</span>
             </div>
           </article>
 
-          <!-- PLANNER -->
-          <article class="eco-card" style="--accent:#7955bb;--tint:#f0eaff">
-            <div class="eco-head">
-              <div class="eco-icon">
-                <svg class="icon"><use href="#i-calendar"/></svg>
-              </div>
-              <span class="badge plan">Roadmap</span>
-            </div>
-            <h3>Athena Planner</h3>
-            <p>
-              Pusat perencanaan aktivitas, to-do list,
-              wishlist, tujuan, proyek, jadwal,
-              dan pengingat lintas ekosistem.
-            </p>
-            <div class="eco-tags">
-              <span>Tasks</span>
-              <span>Goals</span>
-              <span>Wishlist</span>
-            </div>
-            <div class="eco-footer">
-              <span>Personal Productivity</span>
-              <span>Planned</span>
-            </div>
-          </article>
         </div>
+
       </div>
     </section>
 
-    <!-- ACTIVE PRODUCT -->
-    <section class="section white" id="products">
+    <!-- FEATURED PRODUCT -->
+    <section class="section white"
+             id="products"
+             aria-labelledby="product-heading">
+
       <div class="container">
 
         <div class="section-head">
           <div>
-            <div class="kicker">Featured Product</div>
-            <h2>Innovation Already in Motion.</h2>
+            <div class="eyebrow">Featured Product</div>
+            <h2 id="product-heading">
+              Our First Digital Platform.
+            </h2>
             <p>
-              Athena Practice System merupakan produk
-              digital pertama yang telah tersedia
-              dalam ekosistem Athena Hub.
+              Produk aktif yang menjadi langkah awal
+              pengembangan solusi digital Athena.
             </p>
           </div>
-          <span class="badge active">Available Now</span>
         </div>
 
         <article class="featured">
 
           <div class="featured-content">
-            <span class="badge active">Live Platform</span>
+
+            <span class="badge live">Available Now</span>
 
             <h3>Athena Practice System</h3>
 
             <p>
               Platform latihan dan simulasi ujian
-              sertifikasi profesional untuk membantu
-              pengguna berlatih secara terarah,
-              menguji pemahaman, dan mengevaluasi
-              perkembangan belajar.
-              Saat ini berfokus pada persiapan
-              sertifikasi Certified Internal Auditor
-              (CIA) Part 1, Part 2, dan Part 3.
+              profesional dengan fokus saat ini pada
+              Certified Internal Auditor (CIA) Part 1–3.
+              Dilengkapi berbagai metode praktik dan
+              evaluasi perkembangan belajar.
             </p>
 
-            <div class="feature-list">
+            <div class="feature-tags">
               <span>
-                <svg class="icon"><use href="#i-check"/></svg>
+                <svg class="ico"><use href="#i-check"/></svg>
                 Guided Practice
               </span>
               <span>
-                <svg class="icon"><use href="#i-check"/></svg>
+                <svg class="ico"><use href="#i-check"/></svg>
                 Exam Simulation
               </span>
               <span>
-                <svg class="icon"><use href="#i-check"/></svg>
+                <svg class="ico"><use href="#i-check"/></svg>
                 FlashQuestion
               </span>
               <span>
-                <svg class="icon"><use href="#i-check"/></svg>
+                <svg class="ico"><use href="#i-check"/></svg>
                 Learning Analytics
               </span>
               <span>
-                <svg class="icon"><use href="#i-check"/></svg>
+                <svg class="ico"><use href="#i-check"/></svg>
                 Exam Room
               </span>
             </div>
 
-            <div class="feature-actions">
-              <a class="btn primary" href="https://aps.athenahub.id/">
+            <div class="featured-actions">
+              <a class="btn primary"
+                 href="https://aps.athenahub.id/">
                 Explore Athena Practice System ↗
               </a>
-              <a class="btn outline" href="#business">
+
+              <a class="btn outline"
+                 href="#business">
                 Corporate Solutions
               </a>
             </div>
+
           </div>
 
+          <!-- APS ILLUSTRATIVE MOCKUP -->
           <div class="featured-art">
 
-            <div class="app-mock">
-              <div class="app-top">
+            <div class="exam-window">
+
+              <div class="exam-top">
                 <strong>ATHENA PRACTICE SYSTEM</strong>
                 <small>APS</small>
               </div>
 
-              <div class="app-body">
-                <h4>Learn. Practice. Improve.</h4>
-                <p>Professional exam preparation</p>
+              <div class="exam-body">
 
-                <div class="mock-stats">
-                  <div class="mock-stat">
-                    <b>3 Parts</b>
-                    <small>CIA Learning Scope</small>
+                <div class="exam-title">
+                  Professional Exam Preparation
+                </div>
+
+                <div class="exam-sub">
+                  Practice with purpose.
+                </div>
+
+                <div class="exam-row">
+                  <div>
+                    <strong>CIA Part 1</strong>
+                    <small>Internal Audit Fundamentals</small>
                   </div>
-                  <div class="mock-stat">
-                    <b>4 Modes</b>
-                    <small>Practice Experience</small>
+                  <span class="exam-chip">Practice</span>
+                </div>
+
+                <div class="exam-row">
+                  <div>
+                    <strong>CIA Part 2</strong>
+                    <small>Internal Audit Engagement</small>
                   </div>
+                  <span class="exam-chip">Practice</span>
                 </div>
 
-                <div class="mock-row">
-                  <span>CIA Part 1</span>
-                  <small>Practice</small>
-                </div>
-                <div class="mock-row">
-                  <span>CIA Part 2</span>
-                  <small>Practice</small>
-                </div>
-                <div class="mock-row">
-                  <span>CIA Part 3</span>
-                  <small>Practice</small>
+                <div class="exam-row">
+                  <div>
+                    <strong>CIA Part 3</strong>
+                    <small>Internal Audit Function</small>
+                  </div>
+                  <span class="exam-chip">Practice</span>
                 </div>
 
-                <div class="mock-foot">
+                <div class="exam-footnote">
                   Illustrative interface · Not live user data
                 </div>
+
               </div>
             </div>
 
           </div>
+
         </article>
       </div>
     </section>
 
+    <!-- HOW THE ECOSYSTEM CONNECTS -->
+    <section class="section soft" id="integration">
+      <div class="container">
 
-    <!-- BUSINESS CAPABILITIES -->
-    <section class="section white" id="solutions">
+        <div class="connection">
+
+          <div>
+            <div class="eyebrow">Connected Ecosystem</div>
+
+            <h2>
+              Independent Solutions.<br>
+              Connected Opportunities.
+            </h2>
+
+            <p>
+              Setiap domain memiliki fungsi yang jelas.
+              Dalam pengembangan jangka panjang,
+              Athena Hub diarahkan untuk menghubungkan
+              pengalaman pengguna, pengetahuan,
+              dan kapabilitas teknologi antarproduk
+              tanpa menghilangkan fokus masing-masing.
+            </p>
+          </div>
+
+          <!-- SECOND NETWORK ILLUSTRATION -->
+          <div class="connection-diagram">
+
+            <svg viewBox="0 0 500 180"
+                 role="img"
+                 aria-label="Diagram infrastruktur bersama yang mendukung berbagai domain Athena">
+
+              <!-- CONNECTIONS -->
+              <g fill="none"
+                 stroke="#a8c1e9"
+                 stroke-width="2"
+                 stroke-linecap="round">
+
+                <path d="M250 103V66"/>
+                <path d="M250 66H65V46"/>
+                <path d="M250 66H157V46"/>
+                <path d="M250 66H250V46"/>
+                <path d="M250 66H343V46"/>
+                <path d="M250 66H435V46"/>
+
+                <path d="M250 124V143"/>
+              </g>
+
+              <!-- TOP NODES -->
+              <g font-size="10"
+                 font-weight="700"
+                 font-family="Arial,sans-serif"
+                 text-anchor="middle">
+
+                <rect x="18" y="12" width="94" height="34"
+                      rx="8" fill="#fff" stroke="#dce5f3"/>
+                <text x="65" y="33" fill="#365780">Education</text>
+
+                <rect x="117" y="12" width="80" height="34"
+                      rx="8" fill="#fff" stroke="#dce5f3"/>
+                <text x="157" y="33" fill="#365780">Professional</text>
+
+                <rect x="208" y="12" width="84" height="34"
+                      rx="8" fill="#fff" stroke="#dce5f3"/>
+                <text x="250" y="33" fill="#365780">Finance</text>
+
+                <rect x="303" y="12" width="80" height="34"
+                      rx="8" fill="#fff" stroke="#dce5f3"/>
+                <text x="343" y="33" fill="#365780">Business</text>
+
+                <rect x="390" y="12" width="92" height="34"
+                      rx="8" fill="#fff" stroke="#dce5f3"/>
+                <text x="436" y="33" fill="#365780">Homestead</text>
+
+                <!-- CENTER -->
+                <rect x="163" y="89"
+                      width="174" height="43"
+                      rx="10" fill="#1d478b"/>
+                <text x="250" y="115"
+                      font-size="13"
+                      font-weight="800"
+                      fill="#fff">
+                  ATHENA HUB
+                </text>
+
+                <!-- SHARED FOUNDATION -->
+                <rect x="142" y="143"
+                      width="216" height="30"
+                      rx="8" fill="#e3edff"
+                      stroke="#cbdcf8"/>
+                <text x="250" y="162"
+                      fill="#355d9c"
+                      font-size="10">
+                  Shared Digital Capabilities
+                </text>
+
+              </g>
+            </svg>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BROADER BUSINESS CAPABILITIES -->
+    <section class="section white"
+             id="solutions"
+             aria-labelledby="solutions-heading">
+
       <div class="container">
 
         <div class="section-head">
           <div>
-            <div class="kicker">Beyond Digital Products</div>
-            <h2>Our Broader Business Vision.</h2>
+            <div class="eyebrow">Business Capabilities</div>
+
+            <h2 id="solutions-heading">
+              Beyond Digital Products.
+            </h2>
+
             <p>
-              Selain platform digital, Athena memiliki
-              arah pengembangan kapabilitas bisnis,
-              pendidikan, teknologi, dan solusi strategis.
+              Arah pengembangan layanan dan kemampuan bisnis
+              yang memperkuat ekosistem Athena.
             </p>
           </div>
         </div>
@@ -1672,143 +1838,183 @@
         <div class="cap-grid">
 
           <article class="cap">
-            <svg class="icon"><use href="#i-handshake"/></svg>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-handshake"/>
+            </svg>
             <div>
               <strong>Advisory</strong>
-              <p>Business strategy, governance, risk, internal control, dan management advisory.</p>
+              <p>
+                Business strategy, governance,
+                risk, dan management advisory.
+              </p>
             </div>
           </article>
 
           <article class="cap">
-            <svg class="icon"><use href="#i-book"/></svg>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-book"/>
+            </svg>
             <div>
               <strong>Academy</strong>
-              <p>Professional training, workshops, learning programs, dan pengembangan kompetensi.</p>
+              <p>
+                Training, workshops, dan
+                professional learning programs.
+              </p>
             </div>
           </article>
 
           <article class="cap">
-            <svg class="icon"><use href="#i-code"/></svg>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-code"/>
+            </svg>
             <div>
               <strong>Technologies</strong>
-              <p>Software development, digital platforms, data solutions, dan business systems.</p>
+              <p>
+                Software, data solutions,
+                digital platforms, dan automation.
+              </p>
             </div>
           </article>
 
           <article class="cap">
-            <svg class="icon"><use href="#i-layers"/></svg>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-layers"/>
+            </svg>
             <div>
               <strong>Publishing</strong>
-              <p>Buku, e-book, professional guides, publikasi, dan intellectual property.</p>
+              <p>
+                Books, e-books, professional guides,
+                dan knowledge products.
+              </p>
             </div>
           </article>
 
           <article class="cap">
-            <svg class="icon"><use href="#i-film"/></svg>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-film"/>
+            </svg>
             <div>
               <strong>Media & Content</strong>
-              <p>Konten edukatif, video, komunikasi digital, dan pengembangan media.</p>
+              <p>
+                Educational content, video,
+                dan digital communication.
+              </p>
             </div>
           </article>
 
           <article class="cap">
-            <svg class="icon"><use href="#i-business"/></svg>
+            <svg class="ico" aria-hidden="true">
+              <use href="#i-business"/>
+            </svg>
             <div>
               <strong>Enterprise Solutions</strong>
-              <p>Corporate learning, cohort assessment, akses organisasi, dan solusi B2B.</p>
+              <p>
+                Corporate learning, assessments,
+                dan organizational solutions.
+              </p>
             </div>
           </article>
 
         </div>
-
       </div>
     </section>
 
     <!-- ROADMAP -->
-    <section class="section soft" id="upcoming">
+    <section class="section soft"
+             id="upcoming"
+             aria-labelledby="roadmap-heading">
+
       <div class="container">
 
         <div class="section-head">
           <div>
-            <div class="kicker">Ecosystem Roadmap</div>
-            <h2>Building for the Long Term.</h2>
+            <div class="eyebrow">Development Direction</div>
+
+            <h2 id="roadmap-heading">
+              Built to Evolve.
+            </h2>
+
             <p>
-              Pengembangan dilakukan secara bertahap.
-              Ketersediaan setiap produk mengikuti
-              kesiapan teknologi, konten, dan operasional.
+              Ekosistem dikembangkan secara bertahap,
+              dengan prioritas pada kualitas produk
+              dan kebutuhan pengguna.
             </p>
           </div>
         </div>
 
         <div class="roadmap">
 
-          <div class="road current">
-            <span class="step">01 · FOUNDATION</span>
-            <h3>Professional Learning</h3>
-            <p>Penguatan APS, pengalaman belajar, evaluasi, dan layanan pengguna.</p>
-          </div>
+          <article class="road current">
+            <div class="road-label">FOUNDATION</div>
+            <h3>Strengthening the First Product</h3>
+            <p>
+              Kualitas layanan APS,
+              pengalaman pengguna,
+              konten, dan operasional.
+            </p>
+          </article>
 
-          <div class="road">
-            <span class="step">02 · EXPANSION</span>
-            <h3>Finance & Productivity</h3>
-            <p>Keuangan pribadi, pengelolaan aset, tujuan, tugas, dan perencanaan.</p>
-          </div>
+          <article class="road">
+            <div class="road-label">EXPANSION</div>
+            <h3>Developing New Solutions</h3>
+            <p>
+              Pengembangan produk finansial,
+              pengelolaan bisnis,
+              dan kebutuhan pembelajaran.
+            </p>
+          </article>
 
-          <div class="road">
-            <span class="step">03 · DIVERSIFICATION</span>
-            <h3>Education & Business</h3>
-            <p>Tryout akademik, pengelolaan bisnis, dan perluasan solusi organisasi.</p>
-          </div>
-
-          <div class="road">
-            <span class="step">04 · INTEGRATION</span>
-            <h3>Intelligent Ecosystem</h3>
-            <p>Homestead, pengetahuan terintegrasi, AI, dan otomatisasi lintas produk.</p>
-          </div>
+          <article class="road">
+            <div class="road-label">INTEGRATION</div>
+            <h3>Connecting the Ecosystem</h3>
+            <p>
+              Integrasi pengetahuan, teknologi,
+              pengalaman digital,
+              dan layanan lintas domain.
+            </p>
+          </article>
 
         </div>
 
-        <p style="font-size:10px;color:#8190a5;margin:12px 0 0">
-          Roadmap menunjukkan arah strategis, bukan janji tanggal peluncuran.
+        <p class="road-note">
+          Roadmap merupakan arah strategis dan bukan
+          komitmen tanggal peluncuran produk.
         </p>
 
       </div>
     </section>
 
-    <!-- CORPORATE AND PARTNERSHIPS -->
-    <section class="section white" id="business">
+    <!-- CORPORATE CONTACT -->
+    <section class="section white"
+             id="business"
+             aria-labelledby="contact-heading">
+
       <div class="container">
 
-        <div class="contact-panel">
+        <div class="contact">
 
           <div>
-            <div class="kicker">Corporate & Partnerships</div>
+            <div class="eyebrow">Corporate & Partnerships</div>
 
-            <h2>Let's Build Something Meaningful.</h2>
+            <h2 id="contact-heading">
+              Let's Build Something Meaningful.
+            </h2>
 
             <p>
-              Terbuka untuk diskusi kerja sama,
-              kemitraan strategis, akses pembelajaran
-              organisasi, corporate assessment,
-              serta peluang kolaborasi pengembangan
-              ekosistem Athena.
+              Diskusikan kemitraan strategis,
+              corporate learning, program persiapan
+              sertifikasi IAP dan CIA, akses kelompok,
+              Exam Room, serta peluang kolaborasi
+              dengan Athena Hub.
             </p>
 
-            <p style="margin-top:8px">
-              Untuk organisasi, Athena Practice System
-              dapat menjadi titik awal diskusi program
-              persiapan sertifikasi IAP dan CIA,
-              akses kelompok, serta Exam Room.
-            </p>
-
-            <div class="contact-links">
-              <a href="mailto:athenastrategichub@gmail.com">
-                athenastrategichub@gmail.com
-              </a>
-            </div>
+            <a class="contact-mail"
+               href="mailto:athenastrategichub@gmail.com">
+              athenastrategichub@gmail.com
+            </a>
           </div>
 
-          <!-- ORIGINAL WHATSAPP B2B LINK PRESERVED -->
+          <!-- EXISTING B2B WHATSAPP LINK -->
           <a
             class="btn light"
             href="https://wa.me/6287780259813?text=Halo%20Admin%20Athena%2C%0A%0ASaya%20tertarik%20untuk%20berdiskusi%20mengenai%20kerja%20sama%20B2B%20dengan%20Athena%20Hub%2C%20khususnya%20Athena%20Practice%20System.%0A%0AMohon%20informasi%20lebih%20lanjut%20mengenai%20program%20corporate%20dan%20enterprise."
@@ -1825,49 +2031,50 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="section soft" id="about">
+    <section class="section soft"
+             id="about"
+             aria-labelledby="about-heading">
+
       <div class="container about-grid">
 
         <div>
-          <div class="kicker">About Athena</div>
+          <div class="eyebrow">About Athena</div>
 
-          <h2>Built with Purpose.<br>Driven by Growth.</h2>
+          <h2 id="about-heading">
+            Built with Purpose.<br>
+            Driven by Growth.
+          </h2>
 
           <p>
-            Athena Hub adalah ekosistem digital yang
-            dikembangkan dan dikelola oleh
+            Athena Hub dikembangkan dan dikelola oleh
             <strong>PT Athena Strategic Hub</strong>,
             perusahaan Indonesia yang berfokus
-            pada pengembangan solusi berbasis
-            pengetahuan, teknologi, dan inovasi.
-          </p>
-
-          <p>
-            Dimulai melalui Athena Practice System,
-            Athena Hub memiliki visi untuk
-            menghubungkan pendidikan, pengembangan
-            profesional, keuangan, bisnis, produktivitas,
-            dan kehidupan berkelanjutan dalam
-            ekosistem yang bermanfaat dan terus berkembang.
+            pada solusi berbasis pengetahuan,
+            teknologi, dan inovasi.
+            Melalui berbagai inisiatif digital dan
+            pengembangan layanan strategis,
+            Athena berupaya menciptakan manfaat
+            yang relevan bagi individu maupun organisasi.
           </p>
         </div>
 
-       
-<div class="about-quote">
-  <small>OUR VISION</small>
-  <h3>
-    One Ecosystem.<br>
-    Endless Possibilities.
-  </h3>
-  <p>
-    Menghubungkan pengetahuan, teknologi, dan inovasi
-    dalam satu ekosistem terintegrasi untuk memberdayakan
-    individu, keluarga, profesional, dan bisnis
-    agar terus berkembang dan menciptakan masa depan
-    yang lebih baik.
-  </p>
-</div>
+        <div class="about-quote">
 
+          <small>OUR VISION</small>
+
+          <h3>
+            One Ecosystem.<br>
+            Endless Possibilities.
+          </h3>
+
+          <p>
+            Menghubungkan beragam bidang pengetahuan
+            dan solusi untuk membuka peluang
+            pertumbuhan yang lebih luas
+            dan berkelanjutan.
+          </p>
+
+        </div>
 
       </div>
     </section>
@@ -1876,64 +2083,74 @@
 
   <!-- FOOTER -->
   <footer class="footer">
+
     <div class="container">
 
       <div class="footer-grid">
 
-       
-<div>
-  <div class="footer-brand">
-    <img
-      src="/athenahub-logo.png"
-      alt="Athena Hub Logo"
-      width="32"
-      height="32"
-    >
-    <b>ATHENA HUB</b>
-  </div>
+        <!-- BRAND -->
+        <div class="footer-branding">
 
-  <p>
-    An integrated ecosystem connecting education,
-    professional growth, personal finance, business,
-    productivity, and sustainable living
-    through knowledge and technology.
-  </p>
+          <div class="footer-brand">
+            <img
+              src="/athenahub-logo.png"
+              alt=""
+              width="33"
+              height="33"
+            >
+            <strong>ATHENA HUB</strong>
+          </div>
 
-  <p style="margin-top:10px; font-weight:800; color:#ffffff;">
-    One Ecosystem. Endless Possibilities.
-  </p>
-</div>
+          <p>
+            An integrated ecosystem for learning,
+            professional growth, financial wellbeing,
+            business, and sustainable living.
+          </p>
 
+          <p class="tagline">
+            One Ecosystem. Endless Possibilities.
+          </p>
 
+        </div>
+
+        <!-- NAVIGATION -->
         <div>
           <h4>EXPLORE</h4>
+
           <div class="footer-links">
-            <a href="#about">About Us</a>
             <a href="#platform">Our Ecosystem</a>
             <a href="#products">Featured Product</a>
-            <a href="#upcoming">Upcoming Solutions</a>
-            <a href="#business">Corporate & Partnerships</a>
+            <a href="#solutions">Our Solutions</a>
+            <a href="#upcoming">Development Roadmap</a>
+            <a href="#about">About Us</a>
           </div>
         </div>
 
+        <!-- DOMAINS -->
         <div>
           <h4>ECOSYSTEM</h4>
+
           <div class="footer-links">
-            <a href="https://aps.athenahub.id/">
-              Athena Practice System ↗
-            </a>
             <span>Athena Education</span>
+            <span>Athena Professional</span>
             <span>Athena Finance</span>
             <span>Athena Business</span>
             <span>Athena Homestead</span>
           </div>
         </div>
 
+        <!-- CONTACT -->
         <div>
           <h4>CONNECT</h4>
+
           <div class="footer-links">
+
+            <a href="https://aps.athenahub.id/">
+              Open Athena Practice System ↗
+            </a>
+
             <a href="mailto:athenastrategichub@gmail.com">
-              Email Business
+              Email Business ↗
             </a>
 
             <a
@@ -1944,15 +2161,13 @@
               WhatsApp Partnerships ↗
             </a>
 
-            <a href="https://aps.athenahub.id/">
-              Open APS ↗
-            </a>
           </div>
         </div>
 
       </div>
 
       <div class="footer-bottom">
+
         <span>
           Developed & managed by
           <strong>PT Athena Strategic Hub</strong>
@@ -1962,6 +2177,7 @@
           © <span id="year">2026</span>
           Athena Hub. All rights reserved.
         </span>
+
       </div>
 
     </div>
@@ -1970,10 +2186,12 @@
   <script>
     "use strict";
 
-    // Current year
-    const year = document.getElementById("year");
-    if (year) {
-      year.textContent = new Date().getFullYear();
+    // Dynamic copyright year
+    const yearElement = document.getElementById("year");
+
+    if (yearElement) {
+      yearElement.textContent =
+        String(new Date().getFullYear());
     }
   </script>
 
